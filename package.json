@@ -4,7 +4,8 @@
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss/:dist/css/"
+    "build": "sass scss/main.scss:dist/css/main.css",
+    "sass": "sass --watch scss/main.scss:dist/css/main.css"
   },
   "author": "",
   "license": "ISC",
