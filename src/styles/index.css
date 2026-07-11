@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode (default) — values are R G B for rgb(var(--x) / a) */
+    --bg-base: 253 251 255;
+    --bg-warm: 255 250 242;
+    --surface: 255 255 255;
+    --ink: 27 20 32;
+    --ink-soft: 74 67 86;
+    --muted: 139 131 151;
+    --border: 239 233 245;
+
+    --grain-opacity: 0.045;
+    --grain-blend: soft-light;
+  }
+
+  :root.dark {
+    --bg-base: 14 10 20;
+    --bg-warm: 20 14 28;
+    --surface: 26 18 34;
+    --ink: 246 242 251;
+    --ink-soft: 198 188 214;
+    --muted: 138 127 160;
+    --border: 42 32 54;
+
+    --grain-opacity: 0.05;
+    --grain-blend: overlay;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Respect users who ask for less motion — neutralize CSS animations/transitions. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-base text-ink font-sans antialiased;
+    background-image: radial-gradient(
+        1200px 700px at 85% -10%,
+        rgba(255, 188, 0, 0.1),
+        transparent 60%
+      ),
+      radial-gradient(1000px 600px at 5% 5%, rgba(168, 85, 247, 0.09), transparent 55%);
+    background-repeat: no-repeat;
+    text-rendering: optimizeLegibility;
+  }
+
+  :root.dark body {
+    background-image: radial-gradient(
+        1200px 700px at 85% -10%,
+        rgba(255, 94, 58, 0.14),
+        transparent 60%
+      ),
+      radial-gradient(1000px 600px at 5% 5%, rgba(124, 58, 237, 0.16), transparent 55%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: #ff2e7e;
+    color: #fff;
+  }
+
+  /* Accessible focus ring */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px rgb(var(--bg-base)),
+      0 0 0 4px #ff5e3a;
+    border-radius: 8px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .glass {
+    @apply border border-white/40 bg-white/60 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .text-gradient {
+    @apply bg-grad-aurora bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-surface/70 px-3 py-1 font-mono text-xs text-ink-soft;
+  }
+
+  /* thin gradient section divider */
+  .rule-aurora {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 94, 58, 0.5),
+      rgba(168, 85, 247, 0.5),
+      transparent
+    );
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* Pause CSS animations under reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .motion-safe-anim {
+      animation: none !important;
+    }
+  }
+}
+
+/* Full-page film grain (kills gradient banding, adds tactility) */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

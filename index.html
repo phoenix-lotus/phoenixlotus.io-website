@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ff5e3a" />
+
+    <title>Robert Goldberg — Developer, Builder, Pilot · PhoenixLotus</title>
+    <meta
+      name="description"
+      content="Robert (Bobby) Goldberg builds human-first, AI-native software — from an AI grocery marketplace to a construction-document intelligence platform. React / MERN developer in Santa Rosa, CA."
+    />
+    <link rel="canonical" href="https://phoenixlotus.netlify.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PhoenixLotus" />
+    <meta property="og:title" content="Robert Goldberg — Developer, Builder, Pilot" />
+    <meta
+      property="og:description"
+      content="I build human-first, AI-native software. React / MERN developer in Santa Rosa, CA."
+    />
+    <meta property="og:url" content="https://phoenixlotus.netlify.app/" />
+    <meta property="og:image" content="https://phoenixlotus.netlify.app/og/og-default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Person JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Robert Goldberg",
+        "alternateName": "Bobby Goldberg",
+        "jobTitle": "Software Developer & Founder",
+        "url": "https://phoenixlotus.netlify.app/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Santa Rosa", "addressRegion": "CA" },
+        "email": "robert.goldberg.dev@gmail.com",
+        "sameAs": [
+          "https://github.com/phoenix-lotus",
+          "https://www.linkedin.com/in/robert-g-838955193"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Hidden static form so Netlify's build-time bot detects it (the real form is React-rendered). -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>

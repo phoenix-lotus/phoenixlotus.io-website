@@ -1,0 +1,13 @@
+{
+  "name": "Robert Goldberg — PhoenixLotus",
+  "short_name": "PhoenixLotus",
+  "description": "Portfolio of Robert (Bobby) Goldberg — human-first, AI-native software.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0a14",
+  "theme_color": "#ff5e3a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
