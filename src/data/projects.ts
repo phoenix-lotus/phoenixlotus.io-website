@@ -254,17 +254,17 @@ export const projects: Project[] = [
     title: 'Inkloom',
     featured: false,
     order: 5,
-    tagline: 'Print-on-demand, fulfilled from Santa Rosa.',
+    tagline: 'Print-on-demand, fulfilled from Mendocino County.',
     description:
       'A consumer print-on-demand storefront spanning photo prints, wall art, signage, photo books, calendars, and stickers — with a Claude-powered design assistant that reads your photo to recommend size and DPI, server-side PDF generation, and Stripe checkout.',
     longDescription: [
-      'Inkloom is a consumer print storefront with a broad catalog — photo prints, wall art in six substrates, yard signs and banners, photo books, calendars, event signage, and stickers — all fulfilled locally out of Santa Rosa. It pairs a polished storefront (drag-and-drop upload, in-browser cropping) with a Claude design assistant that inspects a photo and recommends print size and DPI, degrading gracefully to deterministic suggestions if the AI is unavailable.',
+      'Inkloom is a consumer print storefront with a broad catalog — photo prints, wall art in six substrates, yard signs and banners, photo books, calendars, event signage, and stickers — all fulfilled locally out of Mendocino County. It pairs a polished storefront (drag-and-drop upload, in-browser cropping) with a Claude design assistant that inspects a photo and recommends print size and DPI, degrading gracefully to deterministic suggestions if the AI is unavailable.',
       'Under the hood it’s a real commerce system: Stripe Checkout with automatic tax and promo codes, server-side PDF composition and watermarking, and a Resend-based transactional-email and vendor-handoff pipeline. Security was code-managed from the start — order tables are service-role-only and the storage bucket serves uploads through signed URLs.',
       'It was cleanly rebranded mid-flight from “Light & Linen” to “Inkloom” across app strings, emails, and even PDF metadata. It runs in Stripe test mode today, with a short punch list between it and live revenue.',
     ],
     role: 'Solo founder & full-stack engineer',
     year: '2026',
-    location: 'Santa Rosa, CA',
+    location: 'Mendocino County, CA',
     tech: [
       'React 19',
       'Vite',

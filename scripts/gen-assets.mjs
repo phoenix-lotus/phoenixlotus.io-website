@@ -44,7 +44,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   </g>
   <text x="90" y="330" font-family="Verdana, sans-serif" font-size="90" font-weight="800" fill="#f6f2fb">Robert Goldberg</text>
   <text x="92" y="410" font-family="Verdana, sans-serif" font-size="40" font-weight="700" fill="url(#aurora)">I build human-first, AI-native software.</text>
-  <text x="92" y="486" font-family="Verdana, sans-serif" font-size="28" fill="#c6bcd6">Developer · Founder · Pilot — Santa Rosa, CA</text>
+  <text x="92" y="486" font-family="Verdana, sans-serif" font-size="28" fill="#c6bcd6">Developer · Founder · Pilot — Mendocino County, CA</text>
   <rect x="92" y="524" width="1016" height="3" rx="1.5" fill="url(#aurora)"/>
   <text x="92" y="576" font-family="Verdana, sans-serif" font-size="24" fill="#8a7fa0">SmileCart · PlanRoute · DrafTech · Fancy's Studio · Inkloom</text>
 </svg>`
