@@ -9,7 +9,10 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
-    "gen:assets": "node scripts/gen-assets.mjs"
+    "gen:assets": "node scripts/gen-assets.mjs",
+    "updater": "node scripts/updater/run.mjs",
+    "updater:check": "node scripts/updater/run.mjs --check",
+    "updater:deploy": "npm run build && netlify deploy --prod --dir=dist"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -23,3 +23,6 @@ npm-debug.log*
 
 # Netlify
 .netlify
+
+# Updater bot local state (snapshot + lockfile)
+scripts/updater/.state/
