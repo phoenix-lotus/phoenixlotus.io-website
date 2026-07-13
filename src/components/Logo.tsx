@@ -68,10 +68,14 @@ export default function Logo({ className, showWord = true }: { className?: strin
         <path d="M27 40 L 37 40" stroke={`url(#${water})`} strokeWidth="2" strokeLinecap="round" fill="none" />
       </svg>
       {showWord && (
-        <span className="font-display text-lg font-extrabold tracking-tight text-ink">
-          Phoenix<span className="text-gradient">Lotus</span>{' '}
-          {/* Full studio name where there's room; collapses to "PhoenixLotus" on the tiniest screens. */}
-          <span className="hidden font-semibold text-ink-soft min-[390px]:inline">Web Studio</span>
+        <span className="inline-flex flex-col">
+          <span className="font-display text-lg font-extrabold leading-none tracking-tight text-ink">
+            Phoenix<span className="text-gradient">Lotus</span>
+          </span>
+          {/* "Web Studio" stacked beneath as a subscript label — same Fraunces face */}
+          <span className="mt-1 font-display text-[0.625rem] font-semibold uppercase leading-none tracking-[0.24em] text-ink-soft">
+            Web Studio
+          </span>
         </span>
       )}
     </span>

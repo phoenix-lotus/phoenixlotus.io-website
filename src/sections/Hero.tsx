@@ -41,8 +41,16 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 text-xl font-medium text-ink-soft sm:text-2xl">
-            PhoenixLotus Web Studio — I’m a{' '}
-            <AnimatedRoles roles={site.roles} className="font-display font-bold" />
+            {/* Mobile: punchy brand + rotating services */}
+            <span className="sm:hidden">
+              PhoenixLotus{' '}
+              <AnimatedRoles roles={['web studio', 'marketing', 'SEO']} className="font-display font-bold" />
+            </span>
+            {/* Desktop: full studio name + professional roles */}
+            <span className="hidden sm:inline">
+              PhoenixLotus Web Studio — I’m a{' '}
+              <AnimatedRoles roles={site.roles} className="font-display font-bold" />
+            </span>
           </motion.p>
 
           <motion.p variants={item} className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
