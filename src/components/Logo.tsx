@@ -69,7 +69,9 @@ export default function Logo({ className, showWord = true }: { className?: strin
       </svg>
       {showWord && (
         <span className="font-display text-lg font-extrabold tracking-tight text-ink">
-          Phoenix<span className="text-gradient">Lotus</span>
+          Phoenix<span className="text-gradient">Lotus</span>{' '}
+          {/* Full studio name where there's room; collapses to "PhoenixLotus" on the tiniest screens. */}
+          <span className="hidden font-semibold text-ink-soft min-[390px]:inline">Web Studio</span>
         </span>
       )}
     </span>

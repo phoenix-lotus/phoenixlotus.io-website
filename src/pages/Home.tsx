@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>{site.name} — Developer, Builder, Pilot · PhoenixLotus</title>
+        <title>{site.name} — {site.role}</title>
         <meta name="description" content={site.blurb} />
         <link rel="canonical" href={site.url + '/'} />
         <meta property="og:title" content={`${site.name} — ${site.role}`} />

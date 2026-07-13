@@ -32,7 +32,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-phoenix-600 opacity-70" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-phoenix-600" />
             </span>
-            {site.location} · React / MERN developer
+            {site.location} · Web design &amp; development
           </motion.p>
 
           <motion.h1 variants={item} className="text-hero font-extrabold text-ink">
@@ -41,8 +41,8 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 text-xl font-medium text-ink-soft sm:text-2xl">
-            Developer, solo founder, and a{' '}
-            <AnimatedRoles roles={['pilot', 'builder', 'entrepreneur', 'dad']} className="font-display font-bold" />
+            PhoenixLotus Web Studio — I’m a{' '}
+            <AnimatedRoles roles={site.roles} className="font-display font-bold" />
           </motion.p>
 
           <motion.p variants={item} className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">

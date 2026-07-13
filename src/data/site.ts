@@ -1,16 +1,16 @@
 export const site = {
   name: 'Robert Goldberg',
   shortName: 'PhoenixLotus',
-  role: 'Software Developer & Founder',
+  role: 'Founder, PhoenixLotus Web Studio',
   location: 'Mendocino County, CA',
   email: 'robert.goldberg.dev@gmail.com',
   url: 'https://phoenixlotus.netlify.app',
   tagline: 'I build human-first, AI-native software.',
   blurb:
-    'I’m a React / MERN developer and solo founder in Mendocino County — also a licensed pilot, entrepreneur, and dad. I build products end to end: design, front end, database, serverless backend, payments, and native shells. I ship fast and honestly — real schemas, real money paths, real Claude pipelines, no vaporware.',
+    'PhoenixLotus Web Studio is my solo shop in Mendocino County — I design and build websites and web apps end to end, for clients and small businesses as well as my own products. Front end, database, serverless backend, payments, native shells; real schemas, real money paths, real Claude pipelines, no vaporware. I’m also a licensed pilot and a dad.',
   blurb2:
-    'The work runs under the PhoenixLotus banner — a personal theme of rising and growing — from a grocery marketplace to a construction-document intelligence platform to tools built for the specific people in my life. The throughline: use AI as the engine, keep the product warm, transparent, and genuinely useful.',
-  roles: ['developer', 'founder', 'pilot', 'entrepreneur', 'dad'],
+    'It all runs under PhoenixLotus Web Studio — the name is a personal theme of rising and growing — spanning a grocery marketplace, a construction-document intelligence platform, and tools built for the specific people in my life. The throughline: use AI as the engine, and keep the product warm, transparent, and genuinely useful.',
+  roles: ['web developer', 'designer', 'founder', 'problem-solver'],
   socials: {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',
