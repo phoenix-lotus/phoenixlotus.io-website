@@ -38,14 +38,16 @@ export default {
         line: 'rgb(var(--border) / <alpha-value>)',
       },
       fontFamily: {
-        display: ['"Bricolage Grotesque"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        display: ['"Fraunces"', 'ui-serif', 'Georgia', 'Cambria', 'serif'],
+        sans: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
-        hero: ['clamp(2.75rem, 8vw, 6rem)', { lineHeight: '0.98', letterSpacing: '-0.03em' }],
-        display: ['clamp(2rem, 5vw, 3.5rem)', { lineHeight: '1.03', letterSpacing: '-0.02em' }],
-        title: ['clamp(1.35rem, 3vw, 2rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        // Fraunces is a high-contrast serif — it wants gentler tracking than the
+        // old grotesque did, so headlines breathe instead of cramping.
+        hero: ['clamp(2.75rem, 8vw, 6rem)', { lineHeight: '1.0', letterSpacing: '-0.02em' }],
+        display: ['clamp(2rem, 5vw, 3.5rem)', { lineHeight: '1.05', letterSpacing: '-0.012em' }],
+        title: ['clamp(1.35rem, 3vw, 2rem)', { lineHeight: '1.18', letterSpacing: '-0.005em' }],
       },
       borderRadius: {
         sm: '10px',

@@ -48,6 +48,8 @@
 
   body {
     @apply bg-base text-ink font-sans antialiased;
+    /* Let Fraunces' optical-size axis track the rendered size (harmless on other fonts). */
+    font-optical-sizing: auto;
     background-image: radial-gradient(
         1200px 700px at 85% -10%,
         rgba(255, 188, 0, 0.1),

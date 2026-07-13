@@ -29,16 +29,25 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
     <radialGradient id="glowB" cx="0.05" cy="0.95" r="0.7">
       <stop offset="0" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="flameV" x1="24" y1="40" x2="24" y2="5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffbc00"/><stop offset="0.18" stop-color="#ff8a1e"/>
+      <stop offset="0.36" stop-color="#ff5e3a"/><stop offset="0.5" stop-color="#ff2e7e"/>
+      <stop offset="0.68" stop-color="#a855f7"/><stop offset="0.84" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="#0e0a14"/>
   <rect width="1200" height="630" fill="url(#glowA)"/>
   <rect width="1200" height="630" fill="url(#glowB)"/>
   <g transform="translate(90,86)">
     <g transform="scale(1.5)">
-      <path d="M24 7c3.2 6.2 3.2 11.8 0 19.5C20.8 18.8 20.8 13.2 24 7Z" fill="url(#aurora)"/>
-      <path d="M24 29C17 24.5 10.5 24.5 6 28c5.4 1.8 8.1 5.4 9.9 10.8C18.6 35.2 21.3 32.5 24 29Z" fill="url(#aurora)" opacity="0.85"/>
-      <path d="M24 29c7-4.5 13.5-4.5 18-1-5.4 1.8-8.1 5.4-9.9 10.8C29.4 35.2 26.7 32.5 24 29Z" fill="url(#aurora)" opacity="0.85"/>
-      <path d="M13 41c7 2.6 15 2.6 22 0" stroke="url(#aurora)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      <path d="M24 38 C 16 37 9 34 6.8 27.5 C 5.8 24.5 6 22 6.5 20.5 C 9.5 24 15 28.5 19.5 31.5 C 22 33.5 23.2 35.5 24 38 Z" fill="url(#flameV)" opacity="0.85"/>
+      <path d="M24 38 C 32 37 39 34 41.2 27.5 C 42.2 24.5 42 22 41.5 20.5 C 38.5 24 33 28.5 28.5 31.5 C 26 33.5 24.8 35.5 24 38 Z" fill="url(#flameV)" opacity="0.85"/>
+      <path d="M23 37 C 17 33 13 27 12.5 19 C 12.3 15 13 12.5 14.5 11 C 16 14 18.5 18 20.5 23 C 22 28 22.7 32.5 23 37 Z" fill="url(#flameV)"/>
+      <path d="M25 37 C 31 33 35 27 35.5 19 C 35.7 15 35 12.5 33.5 11 C 32 14 29.5 18 27.5 23 C 26 28 25.3 32.5 25 37 Z" fill="url(#flameV)"/>
+      <path d="M24 37 C 18.5 31 18 22 20.5 14 C 22 9.5 23.5 7 25 5 C 27 9 29.5 16 29 24 C 28.7 30 27 34 24 37 Z" fill="url(#flameV)"/>
+      <path d="M24 32 C 22 29 22 24 24 21 C 26 24 26 29 24 32 Z" fill="#fff1cf" opacity="0.9"/>
+      <path d="M13 40 L 35 40" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9"/>
     </g>
     <text x="86" y="52" font-family="Verdana, sans-serif" font-size="34" font-weight="700" fill="#f6f2fb">PhoenixLotus</text>
   </g>
