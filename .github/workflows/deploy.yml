@@ -1,0 +1,38 @@
+name: Deploy to Netlify
+
+# Auto-deploy production on every push to master. Builds here, then ships the
+# pre-built dist/ to the phoenixlotus site with the Netlify CLI (the site is not
+# connected to Netlify's own Git builder, so CI owns the build + deploy).
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: {}
+
+# Never let two production deploys race.
+concurrency:
+  group: netlify-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Netlify (production)
+        run: npx netlify-cli@25 deploy --prod --dir=dist --message "CI ${GITHUB_SHA::7} on ${GITHUB_REF_NAME}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          # Site ID is not sensitive; the auth token (a repo secret) is what grants access.
+          NETLIFY_SITE_ID: 7d167d98-356c-4f4e-ab82-b9006a945920
