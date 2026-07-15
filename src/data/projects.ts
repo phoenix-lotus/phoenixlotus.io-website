@@ -355,6 +355,47 @@ export const projects: Project[] = [
     colorTheme: 'aurora',
     media: [{ type: 'fallback', alt: 'Happy Hoppers rentals — early work', frame: 'browser', aspect: '16/10' }],
   },
+  {
+    slug: 'gigapet',
+    title: 'Gigapet',
+    featured: false,
+    order: 8,
+    tagline: 'A festival totem that loves to be fed light and music.',
+    description:
+      'A virtual pet built for a giant LED totem at an EDM festival — it hears the music through a mic, detects the drop, and dances harder the better the set gets. The full pet-brain runs live in the browser: a real bass-flux drop detector reacting to real audio, not a canned animation.',
+    longDescription: [
+      "Gigapet is a Tamagotchi for a festival totem: a globe of addressable LED neon-flex on an 8–10ft pole, with lit \"feed lines\" running down to a Raspberry Pi control box and a 16×16 LED-matrix face. It sleeps through quiet stretches, vibes to a groove, and full-on raves when it detects a drop — fed light manually via a button, fed energy by the crowd.",
+      "The interesting engineering is in the detector, not the lights. Rather than reach for an academic beat-tracker (which loses lock exactly when a buildup kills the kick), the drop detector watches bass-band energy on two time constants — a fast and a slow EMA — and fires when the ratio snaps past a threshold, with spectral flux gating out false positives from wind and crowd noise. It's the same heuristic WLED-SoundReactive and LedFx converge on in practice.",
+      "The pet-brain, audio DSP, and fixture-mapped renderer started life in Python for the real Raspberry Pi build, then got ported line-for-line to TypeScript — including a hand-rolled FFT mirroring the original numpy pipeline exactly — so the whole thing runs standalone in a browser with zero backend. The live demo defaults to a scripted narrative that exercises the real detector end-to-end (no hardcoded triggers), or grant mic access and it reacts to whatever's actually playing in the room.",
+      'The hardware — globe, pole, LEDs, Pi — is a slower build for next festival season. The software above is done and running now.',
+    ],
+    role: 'Solo builder (in progress)',
+    year: '2026–2027',
+    tech: [
+      'TypeScript',
+      'Python',
+      'Three.js',
+      'Web Audio API',
+      'NumPy',
+      'Vite',
+      'Raspberry Pi',
+      'WLED / ESP32',
+      'WS2812B',
+    ],
+    highlights: [
+      'A real bass-flux drop/buildup detector reacting to live audio, not a scripted animation',
+      "Pet-brain, audio DSP, and renderer ported line-for-line Python → TypeScript for a zero-backend browser demo",
+      '3D Three.js visualization of the actual physical fixture layout — globe spiral, pole lines, 16×16 face',
+      'Simulator-first workflow: the full pet is built and testable months before any LED ships',
+    ],
+    status: 'prototype',
+    category: ['concept', 'app'],
+    links: { live: 'https://gigapet-demo.netlify.app', github: 'https://github.com/phoenix-lotus/gigapet' },
+    colorTheme: 'pool',
+    media: [
+      { type: 'fallback', alt: 'Gigapet browser demo — a music-reactive virtual pet', frame: 'browser', aspect: '16/10' },
+    ],
+  },
 ]
 
 /** Small, honest "Labs" strip — early-stage experiments, presented as such. */
