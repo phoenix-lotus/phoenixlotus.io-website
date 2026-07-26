@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
@@ -8,6 +8,8 @@ import GradientButton from '@/components/GradientButton'
 import { nav, site } from '@/data/site'
 import { useLockBody } from '@/lib/hooks'
 import { EASE } from '@/lib/motion'
+
+const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
 
 const menuVariants = {
   hidden: { opacity: 0 },
@@ -21,9 +23,46 @@ const itemVariants = {
 export default function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   useLockBody(open)
 
+  const panelRef = useRef<HTMLDivElement>(null)
+  const closeBtnRef = useRef<HTMLButtonElement>(null)
+  const triggerRef = useRef<HTMLElement | null>(null)
+
+  // Move focus into the panel on open, and restore it to whatever had focus
+  // (the nav's hamburger button) when the menu closes.
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
-    if (open) window.addEventListener('keydown', onKey)
+    if (open) {
+      triggerRef.current = document.activeElement as HTMLElement | null
+      closeBtnRef.current?.focus()
+    } else {
+      triggerRef.current?.focus()
+    }
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      if (e.key !== 'Tab') return
+      const panel = panelRef.current
+      if (!panel) return
+      const focusable = Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(
+        (el) => el.offsetParent !== null,
+      )
+      if (focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+    window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open, onClose])
 
@@ -31,6 +70,8 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
     <AnimatePresence>
       {open && (
         <motion.div
+          id="mobile-menu"
+          ref={panelRef}
           className="fixed inset-0 z-[60] md:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -49,6 +90,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
             <div className="flex items-center justify-between">
               <Logo />
               <button
+                ref={closeBtnRef}
                 onClick={onClose}
                 aria-label="Close menu"
                 className="grid h-11 w-11 place-items-center rounded-full border border-line bg-surface/60 text-ink"

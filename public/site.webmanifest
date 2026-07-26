@@ -1,7 +1,7 @@
 {
-  "name": "Robert Goldberg — PhoenixLotus",
+  "name": "PhoenixLotus Web Studio",
   "short_name": "PhoenixLotus",
-  "description": "Portfolio of Robert (Bobby) Goldberg — human-first, AI-native software.",
+  "description": "PhoenixLotus Web Studio — shipping human-first, AI-native software.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0e0a14",

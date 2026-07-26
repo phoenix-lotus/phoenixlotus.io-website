@@ -9,10 +9,26 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#ff5e3a" />
 
+    <!--
+      Apply the saved/preferred theme before first paint — avoids a white flash
+      for dark-mode visitors while React (and useTheme) is still mounting.
+      Keep this logic in sync with src/lib/useTheme.ts's getInitial().
+    -->
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem('theme')
+          var dark = s === 'dark' || (!s && matchMedia('(prefers-color-scheme: dark)').matches)
+          document.documentElement.classList.toggle('dark', dark)
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch (e) {}
+      })()
+    </script>
+
     <title>Robert Goldberg — Founder, PhoenixLotus Web Studio</title>
     <meta
       name="description"
-      content="PhoenixLotus Web Studio — Robert (Bobby) Goldberg designs and builds human-first, AI-native websites and web apps, for clients and his own products. React / MERN developer in Mendocino County, CA."
+      content="PhoenixLotus Web Studio — human-first, AI-native websites and web apps, designed and built end to end in Mendocino County, CA."
     />
     <link rel="canonical" href="https://phoenixlotus.netlify.app/" />
 
@@ -22,7 +38,7 @@
     <meta property="og:title" content="Robert Goldberg — Founder, PhoenixLotus Web Studio" />
     <meta
       property="og:description"
-      content="I design and build human-first, AI-native websites and web apps — for clients and my own products. PhoenixLotus Web Studio · Mendocino County, CA."
+      content="Shipping human-first, AI-native software. PhoenixLotus Web Studio · Mendocino County, CA."
     />
     <meta property="og:url" content="https://phoenixlotus.netlify.app/" />
     <meta property="og:image" content="https://phoenixlotus.netlify.app/og/og-default.png" />

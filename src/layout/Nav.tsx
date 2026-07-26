@@ -61,6 +61,8 @@ export default function Nav() {
             <button
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
               className="grid h-10 w-10 place-items-center rounded-full border border-line bg-surface/60 text-ink md:hidden"
             >
               <Menu size={20} />

@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>{site.name} — {site.role}</title>
-        <meta name="description" content={site.blurb} />
+        <meta name="description" content={site.description} />
         <link rel="canonical" href={site.url + '/'} />
         <meta property="og:title" content={`${site.name} — ${site.role}`} />
         <meta property="og:description" content={site.tagline} />

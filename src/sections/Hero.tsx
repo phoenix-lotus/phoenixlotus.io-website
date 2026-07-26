@@ -18,6 +18,8 @@ const item = {
 }
 
 export default function Hero() {
+  const [before, after] = site.tagline.split(site.taglineAccent)
+
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16">
       <AuroraBackground />
@@ -36,8 +38,9 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1 variants={item} className="text-hero font-extrabold text-ink">
-            I build <GradientText>human-first</GradientText>,
-            <br className="hidden sm:block" /> <GradientText>AI-native</GradientText> software.
+            {before}
+            <GradientText>{site.taglineAccent}</GradientText>
+            {after}
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 text-xl font-medium text-ink-soft sm:text-2xl">

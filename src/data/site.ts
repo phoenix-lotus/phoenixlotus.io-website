@@ -5,7 +5,12 @@ export const site = {
   location: 'Mendocino County, CA',
   email: 'robert.goldberg.dev@gmail.com',
   url: 'https://phoenixlotus.netlify.app',
-  tagline: 'I build human-first, AI-native software.',
+  tagline: 'Shipping human-first software',
+  /** The span of `tagline` the hero fills with the aurora gradient — must appear verbatim in `tagline`. */
+  taglineAccent: 'human-first',
+  /** SEO meta description. Kept under 160 chars so search results don't truncate it. */
+  description:
+    'PhoenixLotus Web Studio — human-first, AI-native websites and web apps, designed and built end to end in Mendocino County, CA.',
   blurb:
     'PhoenixLotus Web Studio is my solo shop in Mendocino County — I design and build websites and web apps end to end, for clients and small businesses as well as my own products. Front end, database, serverless backend, payments, native shells; real schemas, real money paths, real Claude pipelines, no vaporware. I’m also a licensed pilot and a dad.',
   blurb2:
