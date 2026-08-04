@@ -7,7 +7,7 @@ import { cn } from '@/lib/cn'
 export default function AnimatedRoles({
   roles,
   className,
-  interval = 2200,
+  interval = 3200,
 }: {
   roles: readonly string[]
   className?: string
@@ -41,7 +41,7 @@ export default function AnimatedRoles({
             initial={{ y: '0.6em', opacity: 0, filter: 'blur(6px)' }}
             animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
             exit={{ y: '-0.6em', opacity: 0, filter: 'blur(6px)' }}
-            transition={{ duration: 0.5, ease: EASE }}
+            transition={{ duration: 0.9, ease: EASE }}
           >
             {roles[i]}
           </motion.span>

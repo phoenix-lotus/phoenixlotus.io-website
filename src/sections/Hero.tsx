@@ -49,10 +49,13 @@ export default function Hero() {
               PhoenixLotus{' '}
               <AnimatedRoles roles={['web studio', 'marketing', 'SEO']} className="font-display font-bold" />
             </span>
-            {/* Desktop: full studio name + professional roles */}
+            {/* Desktop: brand name, with "Studio" itself as the rotating word */}
             <span className="hidden sm:inline">
-              PhoenixLotus Web Studio — I’m a{' '}
-              <AnimatedRoles roles={site.roles} className="font-display font-bold" />
+              PhoenixLotus Web{' '}
+              <AnimatedRoles
+                roles={['Studio', 'marketing', 'design', 'apps']}
+                className="font-display font-bold"
+              />
             </span>
           </motion.p>
 
