@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
 import Logo from '@/components/Logo'

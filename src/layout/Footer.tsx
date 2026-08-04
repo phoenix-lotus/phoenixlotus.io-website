@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { ArrowUp } from 'lucide-react'
 import Logo from '@/components/Logo'
 import SocialLinks from '@/components/SocialLinks'

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import type { Project } from '@/data/projects'

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { Helmet } from 'react-helmet-async'
 import { Home } from 'lucide-react'
 import AuroraBackground from '@/components/AuroraBackground'

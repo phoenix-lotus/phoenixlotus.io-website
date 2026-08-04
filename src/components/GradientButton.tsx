@@ -1,5 +1,5 @@
 import { forwardRef, type ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { usePointerFine } from '@/lib/hooks'
 import { cn } from '@/lib/cn'
