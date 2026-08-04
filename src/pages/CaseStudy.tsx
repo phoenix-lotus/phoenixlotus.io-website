@@ -1,5 +1,4 @@
 import { Link, useParams } from 'react-router'
-import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Check, ExternalLink, Github } from 'lucide-react'
 import { getProject, allProjects, STATUS_LABEL } from '@/data/projects'
@@ -31,16 +30,12 @@ export default function CaseStudy() {
       transition={{ duration: 0.5, ease: EASE }}
       className="relative overflow-hidden pt-28"
     >
-      <Helmet>
-        <title>
-          {project.title} — {site.name}
-        </title>
-        <meta name="description" content={project.description} />
-        <link rel="canonical" href={`${site.url}/work/${project.slug}`} />
-        <meta property="og:title" content={`${project.title} — ${project.tagline}`} />
-        <meta property="og:description" content={project.description} />
-        <meta property="og:url" content={`${site.url}/work/${project.slug}`} />
-      </Helmet>
+      <title>{`${project.title} — ${site.name}`}</title>
+      <meta name="description" content={project.description} />
+      <link rel="canonical" href={`${site.url}/work/${project.slug}`} />
+      <meta property="og:title" content={`${project.title} — ${project.tagline}`} />
+      <meta property="og:description" content={project.description} />
+      <meta property="og:url" content={`${site.url}/work/${project.slug}`} />
 
       <AuroraBackground intensity="soft" />
 

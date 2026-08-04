@@ -1,5 +1,4 @@
 import { Link } from 'react-router'
-import { Helmet } from 'react-helmet-async'
 import { Home } from 'lucide-react'
 import AuroraBackground from '@/components/AuroraBackground'
 import GradientText from '@/components/GradientText'
@@ -7,10 +6,8 @@ import GradientText from '@/components/GradientText'
 export default function NotFound() {
   return (
     <section className="relative grid min-h-[80svh] place-items-center overflow-hidden px-6 text-center">
-      <Helmet>
-        <title>Not found — PhoenixLotus</title>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <title>Not found — PhoenixLotus</title>
+      <meta name="robots" content="noindex" />
       <AuroraBackground />
       <div>
         <p className="font-display text-8xl font-extrabold sm:text-9xl">

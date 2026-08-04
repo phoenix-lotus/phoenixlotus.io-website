@@ -6,6 +6,22 @@ import Home from './pages/Home'
 const CaseStudy = lazy(() => import('./pages/CaseStudy'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
+/**
+ * Removes the static [data-default] head tags from index.html once React
+ * has mounted its own title/description/canonical/og:* for the current
+ * route — React's built-in head hoisting only manages tags it renders
+ * itself, so the pre-render fallbacks would otherwise sit alongside the
+ * real ones forever, and document.querySelector (what any JS-executing
+ * crawler or share-preview bot actually reads) would keep finding the
+ * home page's generic copy first. See index.html's comment.
+ */
+function DefaultMetaCleanup() {
+  useEffect(() => {
+    document.querySelectorAll('[data-default]').forEach((el) => el.remove())
+  }, [])
+  return null
+}
+
 /** Scroll to top on route change; honor #hash anchors. */
 function ScrollManager() {
   const { pathname, hash } = useLocation()
@@ -25,6 +41,7 @@ function ScrollManager() {
 export default function App() {
   return (
     <Layout>
+      <DefaultMetaCleanup />
       <ScrollManager />
       <Suspense fallback={<div className="min-h-[60vh]" />}>
         <Routes>

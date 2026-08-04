@@ -25,22 +25,35 @@
       })()
     </script>
 
-    <title>Robert Goldberg — Founder, PhoenixLotus Web Studio</title>
+    <!--
+      Everything below marked data-default is a pre-render fallback for
+      clients that never run JS (link-preview bots, a bare curl) — every
+      route also renders its own title/description/canonical/og:* via
+      React 19's native head hoisting (see src/pages/*.tsx), so once the
+      app mounts these are redundant and get removed by DefaultMetaCleanup
+      in App.tsx. React's hoisting only manages tags it renders itself; it
+      doesn't know to replace tags that were already static HTML, so
+      leaving these in place after mount left og:title etc. stuck on
+      the home page's copy even while viewing a case study.
+    -->
+    <title data-default>Robert Goldberg — Founder, PhoenixLotus Web Studio</title>
     <meta
+      data-default
       name="description"
       content="PhoenixLotus Web Studio — human-first, AI-native websites and web apps, designed and built end to end in Mendocino County, CA."
     />
-    <link rel="canonical" href="https://phoenixlotus.netlify.app/" />
+    <link data-default rel="canonical" href="https://phoenixlotus.netlify.app/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="PhoenixLotus" />
-    <meta property="og:title" content="Robert Goldberg — Founder, PhoenixLotus Web Studio" />
+    <meta data-default property="og:title" content="Robert Goldberg — Founder, PhoenixLotus Web Studio" />
     <meta
+      data-default
       property="og:description"
       content="Shipping human-first, AI-native software. PhoenixLotus Web Studio · Mendocino County, CA."
     />
-    <meta property="og:url" content="https://phoenixlotus.netlify.app/" />
+    <meta data-default property="og:url" content="https://phoenixlotus.netlify.app/" />
     <meta property="og:image" content="https://phoenixlotus.netlify.app/og/og-default.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
