@@ -5,7 +5,7 @@ export const site = {
   location: 'Mendocino County, CA',
   email: 'robert.goldberg.dev@gmail.com',
   url: 'https://phoenixlotus.netlify.app',
-  tagline: 'Shipping human-first software',
+  tagline: 'AI-native software, built human-first',
   /** The span of `tagline` the hero fills with the aurora gradient — must appear verbatim in `tagline`. */
   taglineAccent: 'human-first',
   /** SEO meta description. Kept under 160 chars so search results don't truncate it. */
