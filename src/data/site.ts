@@ -14,7 +14,7 @@ export const site = {
   blurb:
     'PhoenixLotus Web Studio is my solo shop in Mendocino County — I design and build websites and web apps end to end, for clients and small businesses as well as my own products. Front end, database, serverless backend, payments, native shells; real schemas, real money paths, real Claude pipelines, no vaporware. I’m also a licensed pilot and a dad.',
   blurb2:
-    'It all runs under PhoenixLotus Web Studio — the name is a personal theme of rising and growing — spanning a grocery marketplace, a construction-document intelligence platform, and tools built for the specific people in my life. The throughline: use AI as the engine, and keep the product warm, transparent, and genuinely useful.',
+    'It all runs under PhoenixLotus Web Studio — and the name isn’t just a metaphor. After our house burned down in 2017, I started this studio to rebuild what my family had lost, and that same intent still drives it: build something of real value, then make sure it lasts. Today that spans a grocery marketplace, a construction-document intelligence platform, and tools built for the specific people in my life — AI as the engine, the product kept warm, transparent, and genuinely useful.',
   roles: ['web developer', 'designer', 'founder', 'problem-solver'],
   socials: {
     github: 'https://github.com/phoenix-lotus',
