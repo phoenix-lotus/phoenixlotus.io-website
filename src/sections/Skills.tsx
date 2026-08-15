@@ -19,7 +19,7 @@ export default function Skills() {
               What I <GradientText>build with</GradientText>
             </>
           }
-          intro="A full-stack, AI-native toolkit — everything needed to take a product from an empty repo to a native app in the store."
+          intro="The same toolkit behind a five-page site for a local shop and a marketplace built around real payment paths. Whatever gets built stays ordinary web files on ordinary hosting — not a platform account you have to keep renting to stay online."
           align="center"
         />
 

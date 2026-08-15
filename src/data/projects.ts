@@ -59,7 +59,12 @@ export const STATUS_LABEL: Record<Status, string> = {
 
 export const CATEGORY_LABEL: Record<Category, string> = {
   app: 'Apps',
-  client: 'Client',
+  // Not "Client" — this tag covers builds made for family and friends
+  // alongside earlier paid work, and a bare "Client" chip on a studio site
+  // reads as a current roster. There isn't one. (The paid work dates to
+  // ~2020 under the earlier PhoenixLotus Media name; see the
+  // zero-signed-clients memory before writing any track-record line.)
+  client: 'For others',
   ai: 'AI',
   concept: 'Concept',
   early: 'Early',

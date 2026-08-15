@@ -47,13 +47,13 @@ export default function Hero() {
             {/* Mobile: punchy brand + rotating services */}
             <span className="sm:hidden">
               PhoenixLotus{' '}
-              <AnimatedRoles roles={['web studio', 'marketing', 'SEO']} className="font-display font-bold" />
+              <AnimatedRoles roles={['web studio', 'design', 'SEO']} className="font-display font-bold" />
             </span>
             {/* Desktop: brand name, with "Studio" itself as the rotating word */}
             <span className="hidden sm:inline">
               PhoenixLotus Web{' '}
               <AnimatedRoles
-                roles={['Studio', 'marketing', 'design', 'apps']}
+                roles={['Studio', 'design', 'hosting', 'SEO']}
                 className="font-display font-bold"
               />
             </span>
@@ -64,13 +64,13 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={item} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <GradientButton to="/#work" size="lg" magnetic>
-              See my work
+            <GradientButton to="/services" size="lg" magnetic>
+              Services &amp; pricing
               <ArrowRight size={18} />
             </GradientButton>
-            <GradientButton to="/#contact" size="lg" variant="glass">
+            <GradientButton to="/process" size="lg" variant="glass">
               <Sparkles size={16} className="text-phoenix-600" />
-              Get in touch
+              How I work
             </GradientButton>
           </motion.div>
 
@@ -82,8 +82,8 @@ export default function Hero() {
 
       {/* scroll cue */}
       <motion.a
-        href="#work"
-        aria-label="Scroll to work"
+        href="#studio"
+        aria-label="Scroll to what the studio does"
         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-muted sm:flex"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

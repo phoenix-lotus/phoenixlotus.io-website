@@ -1,20 +1,34 @@
 export const site = {
   name: 'Robert Goldberg',
   shortName: 'PhoenixLotus',
-  role: 'Founder, PhoenixLotus Web Studio',
+  studioName: 'PhoenixLotus Web Studio',
+  role: 'Web design & development',
   location: 'Mendocino County, CA',
   email: 'robert.goldberg.dev@gmail.com',
   url: 'https://phoenixlotus.netlify.app',
-  tagline: 'AI-native software, built human-first',
+  tagline: 'Small-business websites, built and maintained in Mendocino County',
   /** The span of `tagline` the hero fills with the aurora gradient — must appear verbatim in `tagline`. */
-  taglineAccent: 'human-first',
+  taglineAccent: 'Mendocino County',
+  /** Home <title>. Duplicated verbatim by index.html's [data-default] tag — change both together. */
+  homeTitle: 'PhoenixLotus Web Studio — Websites for Mendocino County small businesses',
   /** SEO meta description. Kept under 160 chars so search results don't truncate it. */
   description:
-    'PhoenixLotus Web Studio — human-first, AI-native websites and web apps, designed and built end to end in Mendocino County, CA.',
+    'PhoenixLotus Web Studio — a one-person web studio in Mendocino County, CA, building and maintaining websites for small local businesses.',
   blurb:
-    'PhoenixLotus Web Studio is my solo shop in Mendocino County — I design and build websites and web apps end to end, for clients and small businesses as well as my own products. Front end, database, serverless backend, payments, native shells; real schemas, real money paths, real Claude pipelines, no vaporware. I’m also a licensed pilot and a dad.',
+    'PhoenixLotus Web Studio is my one-person shop in Mendocino County. I build websites for small local businesses — design, copy, accessibility, and the structured data that tells Google what you actually do — and then stay on to host and maintain them. I’m also a licensed pilot and a dad.',
+  // Two claims have been removed from this field and must not come back.
+  // (1) A founding year — "started PhoenixLotus in 2017, after our house
+  // burned down" — removed 2026-08-14 per Bobby. No founding date is
+  // grounded anywhere in either repo, and phoenixlotus-pitch-kit's
+  // docs/why-phoenixlotus.md rejects "anything implying tenure, founding
+  // year, or 'years of.'" (2) A product roster ("a grocery marketplace, a
+  // construction-document intelligence platform") that read as a client
+  // list to a prospect arriving here from a pitch. The wording below is
+  // the studio's canonical answer to "who else have you done this for?",
+  // kept in step with WHY_PHOENIXLOTUS_PARAGRAPHS[3] in the pitch kit's
+  // src/content/studio.ts.
   blurb2:
-    'It all runs under PhoenixLotus Web Studio — and the name isn’t just a metaphor. After our house burned down in 2017, I started this studio to rebuild what my family had lost, and that same intent still drives it: build something of real value, then make sure it lasts. Today that spans a grocery marketplace, a construction-document intelligence platform, and tools built for the specific people in my life — AI as the engine, the product kept warm, transparent, and genuinely useful.',
+    'The honest version of the track record: I’ve built and shipped sites for paying clients going back to 2020 — small-business sites and a retail storefront with real checkout — and my own software products since. Those early client sites have long since come down. So I’m not going to hand you a portfolio of other people’s work and ask you to draw conclusions from it. What I can show you is exactly how the work gets done.',
   socials: {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',
@@ -23,8 +37,9 @@ export const site = {
 } as const
 
 export const nav = [
+  { label: 'Services', href: '/services' },
+  { label: 'Process', href: '/process' },
   { label: 'Work', href: '/#work' },
   { label: 'About', href: '/#about' },
-  { label: 'Skills', href: '/#skills' },
   { label: 'Contact', href: '/#contact' },
 ] as const

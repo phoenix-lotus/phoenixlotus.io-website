@@ -15,7 +15,7 @@ const FILTERS: { key: Filter; label: string }[] = [
   { key: 'all', label: 'All' },
   { key: 'app', label: 'Apps' },
   { key: 'ai', label: 'AI' },
-  { key: 'client', label: 'Client' },
+  { key: 'client', label: 'For others' },
   { key: 'concept', label: 'Concept' },
 ]
 
@@ -34,7 +34,7 @@ export default function ProjectsGrid() {
         <SectionHeading
           eyebrow="Everything"
           title="The full project shelf"
-          intro="Marketplaces, AI tools, client work, and the experiments in between."
+          intro="Marketplaces, AI tools, builds for people I know, and the experiments in between."
         />
 
         {/* filter chips */}

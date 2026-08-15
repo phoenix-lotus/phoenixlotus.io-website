@@ -59,7 +59,7 @@ export default function About() {
             eyebrow="About"
             title={
               <>
-                Rising &amp; <GradientText>growing</GradientText> — the PhoenixLotus story
+                Who you’d actually be <GradientText>hiring</GradientText>
               </>
             }
           />

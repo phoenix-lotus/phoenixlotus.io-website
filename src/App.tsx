@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from 'react-router'
 import Layout from './layout/Layout'
 import Home from './pages/Home'
 
+const Services = lazy(() => import('./pages/Services'))
+const Process = lazy(() => import('./pages/Process'))
 const CaseStudy = lazy(() => import('./pages/CaseStudy'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
@@ -46,6 +48,8 @@ export default function App() {
       <Suspense fallback={<div className="min-h-[60vh]" />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/process" element={<Process />} />
           <Route path="/work/:slug" element={<CaseStudy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

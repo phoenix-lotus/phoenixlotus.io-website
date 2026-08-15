@@ -11,10 +11,10 @@ export default function FeaturedWork() {
           eyebrow="Featured work"
           title={
             <>
-              Products I’ve <GradientText>designed &amp; shipped</GradientText>
+              What I’ve <GradientText>actually built</GradientText>
             </>
           }
-          intro="A few flagships — each built solo, end to end, from database to native app. Tap any one for the full story."
+          intro="My own products and one spec redesign a shop didn’t take — each one solo, end to end. The rebuilds I’ve done for local businesses aren’t here: those were built on spec, and they stay private unless the owner decides otherwise. Tap any one for the full story."
         />
 
         <div className="mt-16 space-y-24 md:mt-20 md:space-y-32">

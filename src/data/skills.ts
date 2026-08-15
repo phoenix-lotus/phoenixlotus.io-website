@@ -57,8 +57,20 @@ export const skillGroups: SkillGroup[] = [
 ]
 
 export const facts = [
-  { value: '8', label: 'products shipped' },
-  { value: '5', label: 'AI-native builds' },
-  { value: 'Solo', label: 'design + engineering' },
-  { value: '2019', label: 'building since' },
+  // Four checkable numbers, and nothing else. "shipped" once stood where
+  // "built" does now: it overstated every entry's actual status (see
+  // projects.ts — concept/prototype/in-development/pre-launch/archived, not
+  // one launched and currently live) and had already been corrected once for
+  // exactly this class of error (commit 62b562f, re: DrafTech). "Built" is
+  // true of all 8 regardless of stage, so it doesn't need re-verifying as
+  // each project moves.
+  //
+  // 2020 is the first PAID client work — Evan Fowler and Sarai, under the
+  // earlier PhoenixLotus Media name, git-dated 2020-11 in
+  // ~/Code/DevOps/PhoenixLotusMedia/clients/. It is NOT a founding year and
+  // must never be rendered as one; there is no founding year on record.
+  { value: '2019', label: 'first site built' },
+  { value: '2020', label: 'first paying clients' },
+  { value: '8', label: 'projects built' },
+  { value: 'Solo', label: 'design + build + care' },
 ]
