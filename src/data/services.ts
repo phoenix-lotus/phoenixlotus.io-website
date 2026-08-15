@@ -85,7 +85,7 @@ export const gbpSetup = {
 }
 
 export const adsAddOn =
-  'Running paid ads (Google or Meta) is an add-on to Local Visibility or Social rather than a fourth plan, because running ads well needs the other two already in place: 15% of ad spend, $199/mo minimum, covering setup, budget judgment, and creative approval. Percent-of-spend rather than a flat fee keeps my incentive pointed at the results instead of a fixed retainer regardless of budget.'
+  'Running paid ads (Google or Meta) is an add-on to Local Visibility or Social rather than a fourth plan, because running ads well needs the other two already in place: 15% of ad spend, $149/mo minimum, covering setup, budget judgment, and creative approval. Percent-of-spend rather than a flat fee keeps my incentive pointed at the results instead of a fixed retainer regardless of budget.'
 
 export const terms =
   'Every monthly plan is month-to-month. Cancel anytime with 30 days notice, and your domain and files stay yours either way.'
