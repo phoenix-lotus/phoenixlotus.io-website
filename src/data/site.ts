@@ -5,7 +5,7 @@ export const site = {
   role: 'Web design & development',
   location: 'Mendocino County, CA',
   email: 'robert.goldberg.dev@gmail.com',
-  url: 'https://phoenixlotus.netlify.app',
+  url: 'https://phoenixlotus.io',
   tagline: 'Small-business websites, built and maintained in Mendocino County',
   /** The span of `tagline` the hero fills with the aurora gradient — must appear verbatim in `tagline`. */
   taglineAccent: 'Mendocino County',

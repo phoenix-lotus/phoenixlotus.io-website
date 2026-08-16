@@ -5,6 +5,15 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# The netlify.app subdomain must not serve as a second canonical home —
+# 301 everything to the apex. Placed BEFORE the SPA fallback: Netlify
+# processes rules in order, and after the fallback this would never match.
+[[redirects]]
+  from = "https://phoenixlotus.netlify.app/*"
+  to = "https://phoenixlotus.io/:splat"
+  status = 301
+  force = true
+
 # SPA fallback so /work/:slug deep links resolve to the app
 [[redirects]]
   from = "/*"
