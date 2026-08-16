@@ -59,11 +59,12 @@ export const skillGroups: SkillGroup[] = [
 export const facts = [
   // Four checkable numbers, and nothing else. "shipped" once stood where
   // "built" does now: it overstated every entry's actual status (see
-  // projects.ts — concept/prototype/in-development/pre-launch/archived, not
+  // projects.ts — mvp/prototype/in-development/pre-launch/archived, not
   // one launched and currently live) and had already been corrected once for
-  // exactly this class of error (commit 62b562f, re: DrafTech). "Built" is
-  // true of all 8 regardless of stage, so it doesn't need re-verifying as
-  // each project moves.
+  // exactly this class of error (commit 62b562f, re: DrafTech — since
+  // removed from the shelf; the lesson predates and outlives the tile).
+  // "Built" is true of all 8 regardless of stage, so it doesn't need
+  // re-verifying as each project moves.
   //
   // 2020 is the first PAID client work — Evan Fowler and Sarai, under the
   // earlier PhoenixLotus Media name, git-dated 2020-11 in

@@ -129,6 +129,12 @@ export default function Process() {
                 against a fixed schedule, that’s a real reason to hire one.
               </p>
               <p>
+                In practice, though, I’m around. The laptop comes with me everywhere, and Starlink
+                keeps me connected whether I’m in the redwoods or out on the coast — living remote
+                here doesn’t mean being unreachable. That covers the everyday reality; the
+                structural risk still deserves a structural answer:
+              </p>
+              <p>
                 What I can do is make being wrong about me survivable. What you end up holding is
                 ordinary web files on ordinary hosting, in your own accounts, in a stack any
                 competent developer can pick up — not a proprietary system only I can log into. The

@@ -55,7 +55,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   <text x="92" y="410" font-family="Verdana, sans-serif" font-size="40" font-weight="700" fill="url(#aurora)">Shipping human-first software</text>
   <text x="92" y="486" font-family="Verdana, sans-serif" font-size="28" fill="#c6bcd6">Founder · Web Developer · Designer — Mendocino County, CA</text>
   <rect x="92" y="524" width="1016" height="3" rx="1.5" fill="url(#aurora)"/>
-  <text x="92" y="576" font-family="Verdana, sans-serif" font-size="24" fill="#8a7fa0">SmileCart · PlanRoute · DrafTech · Fancy's Studio · Inkloom</text>
+  <text x="92" y="576" font-family="Verdana, sans-serif" font-size="24" fill="#8a7fa0">SmileCart · PlanRoute · Inkloom · HopFiesta · Fancy's Studio</text>
 </svg>`
 await sharp(Buffer.from(og)).png().toFile(`${PUB}/og/og-default.png`)
 

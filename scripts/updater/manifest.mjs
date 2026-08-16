@@ -53,12 +53,12 @@ export const CHROME_BIN =
 export const PROJECTS = {
   smilecart: { source: 'github', repo: 'smilecart', liveUrl: null },
   planroute: { source: 'github', repo: 'planroute', liveUrl: 'https://planroute.app' },
-  draftech: { source: 'github', repo: 'draftech-redesign', liveUrl: null },
   'fancys-studio': {
     source: 'local',
     path: '/Users/robertgoldberg/Code/Fancy',
     liveUrl: null,
   },
+  hopfiesta: { source: 'github', repo: 'hopfiesta', liveUrl: null },
   inkloom: { source: 'github', repo: 'printshop-ai', liveUrl: null }, // repo name is stale ("printshop-ai" → product is Inkloom)
   typewriter: { source: 'github', repo: 'typewriter', liveUrl: null },
   'happy-hoppers': {
