@@ -123,16 +123,20 @@ export default function Process() {
             </h2>
             <div className="mt-5 max-w-3xl space-y-4 text-lg leading-relaxed text-ink-soft">
               <p>
-                That’s the right question, and I can’t answer it with a reference. PhoenixLotus is
-                me. If I’m out, nothing moves — there’s no bench and no account manager. An agency
-                with staff genuinely doesn’t have that problem, and if you need guaranteed coverage
-                against a fixed schedule, that’s a real reason to hire one.
+                That’s the right question, and here’s the honest shape of it: PhoenixLotus is one
+                human — but it isn’t one pair of hands. The studio runs with an AI staff. Every
+                project’s full history lives in a system that never forgets it, automated checks
+                run against every site’s health and every deploy whether I’m at the desk or not,
+                follow-ups schedule themselves, and every change gets a second read before it
+                ships. If you need guaranteed human coverage against a fixed schedule, an agency
+                with a bench is still the right call — but “one person” undersells what’s actually
+                on shift here.
               </p>
               <p>
-                In practice, though, I’m around. The laptop comes with me everywhere, and Starlink
-                keeps me connected whether I’m in the redwoods or out on the coast — living remote
-                here doesn’t mean being unreachable. That covers the everyday reality; the
-                structural risk still deserves a structural answer:
+                As for being around: the laptop comes with me everywhere, and Starlink keeps me
+                connected whether I’m in the redwoods or out on the coast — living remote here
+                doesn’t mean being unreachable. And the structural risk still deserves a
+                structural answer:
               </p>
               <p>
                 What I can do is make being wrong about me survivable. What you end up holding is
