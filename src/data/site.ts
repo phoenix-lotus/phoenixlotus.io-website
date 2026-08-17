@@ -15,7 +15,7 @@ export const site = {
   description:
     'PhoenixLotus Web Studio — a one-person web studio in Mendocino County, CA, building and maintaining websites for small local businesses.',
   blurb:
-    'PhoenixLotus Web Studio is my one-person shop in Mendocino County. I build websites for small local businesses — design, copy, accessibility, and the structured data that tells Google, and now AI assistants, what you actually do — then stay on to host and maintain them, keep your Google Business Profile complete, and run review requests by the rules. Sites are built light enough to hold up on rural connections, plans are month-to-month, and your domain and files stay yours.',
+    'PhoenixLotus Web Studio is my one-person shop in Mendocino County. I build websites for small local businesses — design, copy, accessibility, and the structured data that tells Google, and now AI assistants, what you actually do — then stay on to host and maintain them, keep your Google Business Profile complete, and make it simple for your customers to leave a review. Sites are built light enough to hold up on rural connections, plans are month-to-month, and your domain and files stay yours.',
   // Two claims have been removed from this field and must not come back.
   // (1) A founding year — "started PhoenixLotus in 2017, after our house
   // burned down" — removed 2026-08-14 per Bobby. No founding date is
