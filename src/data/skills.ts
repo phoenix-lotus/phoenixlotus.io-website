@@ -73,5 +73,5 @@ export const facts = [
   { value: '2019', label: 'first site built' },
   { value: '2020', label: 'first paying clients' },
   { value: '8', label: 'projects built' },
-  { value: 'Solo', label: 'design + build + care' },
+  { value: 'Family', label: 'owned & operated' },
 ]

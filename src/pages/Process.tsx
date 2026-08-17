@@ -123,14 +123,15 @@ export default function Process() {
             </h2>
             <div className="mt-5 max-w-3xl space-y-4 text-lg leading-relaxed text-ink-soft">
               <p>
-                That’s the right question, and here’s the honest shape of it: PhoenixLotus is one
-                human — but it isn’t one pair of hands. The studio runs with an AI staff. Every
-                project’s full history lives in a system that never forgets it, automated checks
-                run against every site’s health and every deploy whether I’m at the desk or not,
-                follow-ups schedule themselves, and every change gets a second read before it
-                ships. If you need guaranteed human coverage against a fixed schedule, an agency
-                with a bench is still the right call — but “one person” undersells what’s actually
-                on shift here.
+                That’s the right question, and here’s the honest shape of it: PhoenixLotus is a
+                family company — I founded it and run the builds, Katie writes and edits — and it
+                isn’t one pair of hands even when it’s one person at the desk. The studio runs
+                with an AI staff. Every project’s full history lives in a system that never
+                forgets it, automated checks run against every site’s health and every deploy
+                whether I’m at the desk or not, follow-ups schedule themselves, and every change
+                gets a second read before it ships. If you need guaranteed human coverage against
+                a fixed schedule, an agency with a bench is still the right call — but “one
+                person” undersells what’s actually on shift here.
               </p>
               <p>
                 As for being around: the laptop comes with me everywhere, and Starlink keeps me
