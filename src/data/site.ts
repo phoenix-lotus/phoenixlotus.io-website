@@ -4,7 +4,7 @@ export const site = {
   studioName: 'PhoenixLotus Web Studio',
   role: 'Web design & development',
   location: 'Mendocino County, CA',
-  email: 'bobby@phoenixlotus.io',
+  email: 'hello@phoenixlotus.io',
   url: 'https://phoenixlotus.io',
   tagline: 'Small-business websites, built and maintained in Mendocino County',
   /** The span of `tagline` the hero fills with the aurora gradient — must appear verbatim in `tagline`. */
@@ -32,7 +32,7 @@ export const site = {
   socials: {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',
-    email: 'mailto:bobby@phoenixlotus.io',
+    email: 'mailto:hello@phoenixlotus.io',
   },
 } as const
 
