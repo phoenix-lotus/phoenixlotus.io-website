@@ -123,21 +123,25 @@ export default function Process() {
             </h2>
             <div className="mt-5 max-w-3xl space-y-4 text-lg leading-relaxed text-ink-soft">
               <p>
-                That’s the right question, and here’s the honest shape of it: PhoenixLotus is a
-                family company — I founded it and run the builds, Katie writes and edits — and it
-                isn’t one pair of hands even when it’s one person at the desk. The studio runs
-                with an AI staff. Every project’s full history lives in a system that never
-                forgets it, automated checks run against every site’s health and every deploy
-                whether I’m at the desk or not, follow-ups schedule themselves, and every change
-                gets a second read before it ships. If you need guaranteed human coverage against
-                a fixed schedule, an agency with a bench is still the right call — but “one
-                person” undersells what’s actually on shift here.
+                That’s the right question, and it deserves a plain promise before anything
+                clever: during business hours — Monday through Friday, 9 to 5 — you get a human,
+                and the human is me. Your message doesn’t go to a ticket queue or a help desk; it
+                goes to the person who built your site. PhoenixLotus is a family company — I
+                founded it and run the builds, Katie writes and edits — so the person who answers
+                is also the person accountable.
               </p>
               <p>
-                As for being around: the laptop comes with me everywhere, and Starlink keeps me
-                connected whether I’m in the redwoods or out on the coast — living remote here
-                doesn’t mean being unreachable. And the structural risk still deserves a
-                structural answer:
+                Outside those hours the studio doesn’t go dark. It runs with an AI staff: every
+                project’s full history lives in a system that never forgets it, automated checks
+                run against every site’s health and every deploy whether I’m at the desk or not,
+                follow-ups schedule themselves, and every change gets a second read before it
+                ships. If you need a staffed phone at midnight, a big agency is still the honest
+                recommendation — but “one person” undersells what’s actually on shift here.
+              </p>
+              <p>
+                And being remote never means being unreachable: the laptop comes with me
+                everywhere, and Starlink keeps me connected whether I’m in the redwoods or out on
+                the coast. Still, the structural risk deserves a structural answer:
               </p>
               <p>
                 What I can do is make being wrong about me survivable. What you end up holding is
