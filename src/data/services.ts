@@ -25,8 +25,9 @@ export const plans: Plan[] = [
     eyebrow: 'Care & hosting',
     price: '$99',
     cadence: '/month',
-    body: 'Hosting, uptime monitoring, security and dependency updates, up to two content updates a month, and a monthly health report.',
+    body: 'Hosting, uptime monitoring, security and dependency updates, up to two content updates a month, and a monthly health report — plus a real person on the other end during business hours, Monday to Friday.',
     includes: [
+      'Business hours M–F 9–5 — a real person, not a ticket queue',
       'Hosting + SSL, uptime monitoring',
       'Security & dependency updates',
       'Up to 2 content updates/mo',
