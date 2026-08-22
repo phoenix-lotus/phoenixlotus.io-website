@@ -16,7 +16,7 @@ export default function Skills() {
           eyebrow="Toolkit"
           title={
             <>
-              What I <GradientText>build with</GradientText>
+              What we <GradientText>build with</GradientText>
             </>
           }
           intro="The same toolkit behind a five-page site for a local shop and a marketplace built around real payment paths. Whatever gets built stays ordinary web files on ordinary hosting — not a platform account you have to keep renting to stay online."

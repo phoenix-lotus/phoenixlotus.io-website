@@ -35,10 +35,10 @@ export const steps: Step[] = [
   {
     n: '02',
     title: 'A facts table with a confidence column',
-    body: 'Your hours, your address, your service area, your license numbers, the name you actually trade under. Each one gets cross-checked against your site and whatever else applies — Google Business, Yelp, the industry directory, the Secretary of State filing — and each one carries a note on how confident I am and where it came from.',
+    body: 'Your hours, your address, your service area, your license numbers, the name you actually trade under. Each one gets cross-checked against your site and whatever else applies — Google Business, Yelp, the industry directory, the Secretary of State filing — and each one carries a note on how confident we are and where it came from.',
     detail: [
       'Where two sources disagree, both get recorded — never a silent pick',
-      'Anything I can’t confirm is written into the build as TO CONFIRM WITH OWNER, not guessed',
+      'Anything we can’t confirm is written into the build as TO CONFIRM WITH OWNER, not guessed',
       'Each unconfirmed item also becomes a numbered blocker, so nothing gets quietly lost between research and launch',
       'Third-party links — booking engines, embeds, portals — get fetched live and confirmed to resolve, never rebuilt from a note',
     ],
@@ -63,7 +63,7 @@ export const steps: Step[] = [
     detail: [
       'The gate is verified live before a link is sent, not assumed',
       'Nothing goes public until you’ve seen it and said yes',
-      'If the read on your business turns out to be wrong, that’s a cost on my end rather than an invoice you have to argue about',
+      'If the read on your business turns out to be wrong, that’s a cost on our end rather than an invoice you have to argue about',
     ],
     theme: 'pool',
   },

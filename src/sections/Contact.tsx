@@ -25,12 +25,12 @@ export default function Contact() {
               Contact
             </p>
             <h2 className="text-display font-extrabold text-ink">
-              Tell me about <GradientText>your business.</GradientText>
+              Tell us about <GradientText>your business.</GradientText>
             </h2>
             <p className="mt-4 max-w-md text-lg leading-relaxed text-ink-soft">
-              Send me your current site’s address and what it isn’t doing for you. I’ll take a real
-              look and write back with what I’d change and what it would cost — and if I’m not the
-              right fit, I’ll tell you that instead.
+              Send us your current site’s address and what it isn’t doing for you. We’ll take a real
+              look and write back with what we’d change and what it would cost — and if we’re not
+              the right fit, we’ll tell you that instead.
             </p>
 
             <ul className="mt-8 space-y-3">

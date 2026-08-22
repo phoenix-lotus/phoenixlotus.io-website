@@ -6,7 +6,13 @@ faithfully, in the site's established voice, changing as little as possible.
 
 ## Voice
 
-- First person singular: **"I"**, never "we". PhoenixLotus is the brand, but the site speaks as one person.
+- The site speaks as **"we"** — the studio — never first-person singular. (Changed
+  2026-08-20; the old rule here said the opposite, and this file is an active
+  instruction to an LLM, so a stale rule silently regresses the whole site.)
+- Robert and Katie appear in **third person** for role attributions.
+- Robert's pre-studio solo track record (his own products, the 2019/2020 client
+  work) stays attributed to **Robert personally** — never converted to a joint
+  "we" claim.
 - Warm, plain-spoken, and honest. No hype, no buzzword salad, no vaporware. If something isn't shipped, don't imply it is.
 - Match the tone of the existing entry you're given. Prefer tightening real detail over adding adjectives.
 - Keep the developer's location facts as-is unless the source clearly states a change (e.g. "Mendocino County, CA").

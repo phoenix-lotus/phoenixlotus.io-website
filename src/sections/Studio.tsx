@@ -46,7 +46,7 @@ export default function Studio() {
               What PhoenixLotus <GradientText>actually does</GradientText>
             </>
           }
-          intro="Websites for small businesses in and around Mendocino County — designed, built, and then looked after by the person who built them."
+          intro="Websites for small businesses in and around Mendocino County — designed, built, and then looked after by the people who built them."
           align="center"
         />
 

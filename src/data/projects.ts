@@ -339,7 +339,7 @@ export const projects: Project[] = [
     order: 7,
     tagline: 'Where it all started.',
     description:
-      'The origin story — an early (2019) website for a bounce-house and party-rental business. My first real build for a live venture, and the entrepreneurial spark behind everything else on this page.',
+      'The origin story — an early (2019) website for a bounce-house and party-rental business. Robert’s first real build for a live venture, and the entrepreneurial spark behind everything else on this page.',
     longDescription: [
       'Happy Hoppers Rentals is the earliest project in this portfolio and the entrepreneurial spark behind it — a website for a bounce-house and party-rental business, first stood up in 2019. It’s here as an origin story rather than a technical showcase: the moment of building something real, for a real audience, and shipping it.',
       'The through-line from here to the current work is entrepreneurial, not architectural. The instinct visible in Happy Hoppers — take a concrete local business, put it online, make it easy for a customer to say yes — is the same one that shows up, far more sophisticated, in SmileCart, Inkloom, and Fancy’s Studio. The starting point of the rise-and-grow arc.',
@@ -348,8 +348,8 @@ export const projects: Project[] = [
     year: '2019',
     tech: ['HTML', 'CSS', 'JavaScript'],
     highlights: [
-      'My first end-to-end build for a live, real-world business',
-      'An early version of the commerce patterns in my later products',
+      'Robert’s first end-to-end build for a live, real-world business',
+      'An early version of the commerce patterns in his later products',
       'The entrepreneurial origin point of the PhoenixLotus body of work',
     ],
     status: 'archived',

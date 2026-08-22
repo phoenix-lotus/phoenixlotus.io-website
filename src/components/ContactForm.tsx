@@ -76,7 +76,7 @@ export default function ContactForm() {
             </div>
             <h3 className="font-display text-2xl font-bold text-ink">Message sent!</h3>
             <p className="mt-2 max-w-xs text-ink-soft">
-              Thanks for reaching out — I’ll get back to you soon.
+              Thanks for reaching out — we’ll get back to you soon.
             </p>
             <button
               onClick={() => setState('idle')}
@@ -120,12 +120,12 @@ export default function ContactForm() {
             </Field>
 
             <Field id="message" label="Message" error={errors.message}>
-              <textarea id="message" name="message" rows={5} placeholder="Tell me what you’re building…" className={cn(field, 'resize-none')} />
+              <textarea id="message" name="message" rows={5} placeholder="Tell us what you’re building…" className={cn(field, 'resize-none')} />
             </Field>
 
             {state === 'error' && (
               <p className="text-sm text-red-500" role="alert">
-                Something went wrong sending that. Please email me directly instead.
+                Something went wrong sending that. Please email us directly instead.
               </p>
             )}
 

@@ -2,20 +2,29 @@ export const site = {
   name: 'Robert Goldberg',
   shortName: 'PhoenixLotus',
   studioName: 'PhoenixLotus Web Studio',
-  role: 'Web design & development',
+  role: 'Web design & marketing',
   location: 'Mendocino County, CA',
   email: 'hello@phoenixlotus.io',
   url: 'https://phoenixlotus.io',
-  tagline: 'Small-business websites, built and maintained in Mendocino County',
-  /** The span of `tagline` the hero fills with the aurora gradient — must appear verbatim in `tagline`. */
-  taglineAccent: 'Mendocino County',
+  // No longer the hero H1 (that's built in Hero.tsx around the typewriter
+  // slot) — still rendered verbatim in the footer.
+  tagline: 'Web design for your business, done right.',
+  // "here" leans on the hero's eyebrow badge naming `location` directly
+  // above the H1 — if that badge ever drops the county, this sentence
+  // loses its antecedent and needs rewording.
+  heroSub:
+    'Websites, Google profile clean-ups, and the marketing that keeps them working — for small businesses here and beyond.',
   /** Home <title>. Duplicated verbatim by index.html's [data-default] tag — change both together. */
-  homeTitle: 'PhoenixLotus Web Studio — Websites for Mendocino County small businesses',
+  homeTitle: 'PhoenixLotus Web Studio — Web design & marketing for Mendocino County small businesses',
   /** SEO meta description. Kept under 160 chars so search results don't truncate it. */
   description:
-    'PhoenixLotus Web Studio — a family-run web studio in Mendocino County, CA, building and maintaining websites for small local businesses.',
+    'A family studio in Mendocino County, CA — web design, Google Business Profile clean-ups, and the marketing that keeps small-business websites working.',
+  // Naming Katie by full married surname + the co-founded framing is an
+  // explicit owner decision (Bobby, 2026-08-20) — it supersedes the earlier
+  // first-name-plus-role-only rule and the "founded by Robert" framing in
+  // phoenixlotus-pitch-kit's docs/why-phoenixlotus.md (updated same day).
   blurb:
-    'PhoenixLotus Web Studio is our family\u2019s shop in Mendocino County — I founded it and do the building, Katie writes and edits, and the next generation will grow into it in time. We make websites for small local businesses — the design, the words, and the behind-the-scenes details that tell Google, and now AI assistants, what you actually do — built to work for everyone, even on slow rural internet. And I stick around: hosting and updates, keeping your Google listing complete, and making it simple for your customers to leave a review. Everything is month-to-month, and your web address and your files are always yours.',
+    'PhoenixLotus Web Studio is a family studio in Mendocino County \u2014 founded by Robert and Katie Goldberg. Robert architects the technical side; Katie writes and edits the content. We make websites for small local businesses \u2014 the design, the content, and the behind-the-scenes details that tell Google, and now AI assistants, what you actually do \u2014 built to work for everyone, even on slow rural internet. And we stick around: hosting and updates, keeping your Google listing complete, and making it simple for your customers to leave a review. Everything is month-to-month, and your web address and your files are always yours.',
   // Two claims have been removed from this field and must not come back.
   // (1) A founding year — "started PhoenixLotus in 2017, after our house
   // burned down" — removed 2026-08-14 per Bobby. No founding date is
@@ -32,7 +41,7 @@ export const site = {
   // directly above this, and saying "Katie is the writer and editor"
   // twice in adjacent paragraphs reads as copy-paste.
   blurb2:
-    'The honest version of the track record: I’ve built and shipped sites for paying clients going back to 2020 — small-business sites and a retail storefront with real checkout — and my own software products since. Those early client sites have long since come down. So I’m not going to hand you a portfolio of other people’s work and ask you to draw conclusions from it. What I can show you is exactly how the work gets done.',
+    'The honest version of the track record: Robert has built and shipped sites for paying clients going back to 2020 — small-business sites and a retail storefront with real checkout — and his own software products since. Those early client sites have long since come down. So we’re not going to hand you a portfolio of other people’s work and ask you to draw conclusions from it. What we can show you is exactly how the work gets done.',
   socials: {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',

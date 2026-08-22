@@ -6,6 +6,8 @@
   "description": "Portfolio of Robert (Bobby) Goldberg — PhoenixLotus",
   "scripts": {
     "dev": "vite",
+    "check:prices": "node scripts/check-prices.mjs",
+    "prebuild": "npm run check:prices",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",

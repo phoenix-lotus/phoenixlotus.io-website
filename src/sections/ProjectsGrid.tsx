@@ -34,7 +34,7 @@ export default function ProjectsGrid() {
         <SectionHeading
           eyebrow="Everything"
           title="The full project shelf"
-          intro="Marketplaces, AI tools, builds for people I know, and the experiments in between."
+          intro="Marketplaces, AI tools, builds for people we know, and the experiments in between."
         />
 
         {/* filter chips */}

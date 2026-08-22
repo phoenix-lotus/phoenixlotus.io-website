@@ -36,11 +36,11 @@
       leaving these in place after mount left og:title etc. stuck on
       the home page's copy even while viewing a case study.
     -->
-    <title data-default>PhoenixLotus Web Studio — Websites for Mendocino County small businesses</title>
+    <title data-default>PhoenixLotus Web Studio — Web design &amp; marketing for Mendocino County small businesses</title>
     <meta
       data-default
       name="description"
-      content="PhoenixLotus Web Studio — a family-run web studio in Mendocino County, CA, building and maintaining websites for small local businesses."
+      content="A family studio in Mendocino County, CA — web design, Google Business Profile clean-ups, and the marketing that keeps small-business websites working."
     />
     <link data-default rel="canonical" href="https://phoenixlotus.io/" />
 
@@ -50,12 +50,12 @@
     <meta
       data-default
       property="og:title"
-      content="PhoenixLotus Web Studio — Websites for Mendocino County small businesses"
+      content="PhoenixLotus Web Studio — Web design &amp; marketing for Mendocino County small businesses"
     />
     <meta
       data-default
       property="og:description"
-      content="PhoenixLotus Web Studio — a family-run web studio in Mendocino County, CA, building and maintaining websites for small local businesses."
+      content="A family studio in Mendocino County, CA — web design, Google Business Profile clean-ups, and the marketing that keeps small-business websites working."
     />
     <meta data-default property="og:url" content="https://phoenixlotus.io/" />
     <meta property="og:image" content="https://phoenixlotus.io/og/og-default.png" />
@@ -73,7 +73,7 @@
       One block, not two: this replaced a standalone Person block that
       described a developer rather than the business, so a search engine
       reading this page and a prospect reading a pitch saw two different
-      companies. The person is still here, as `founder`.
+      companies. The people are still here, as the `founder` array.
 
       Deliberately NO `address`. This is a service-area business with no
       public storefront, so the geography is modeled as `areaServed` —
@@ -84,6 +84,10 @@
       hand-copied from phoenixlotus-pitch-kit's src/content/rateCard.ts;
       change that file first, then src/data/services.ts, then here.
     -->
+    <!-- areaServed below stays the anchor county on purpose: the hero's "here
+      and beyond" is a prose invitation, and schema areaServed is non-exclusive,
+      so claiming only the home county keeps the machine-readable claim
+      conservative and true (decision 2026-08-20). -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -91,22 +95,29 @@
         "@id": "https://phoenixlotus.io/#studio",
         "name": "PhoenixLotus Web Studio",
         "alternateName": "PhoenixLotus",
-        "description": "A family-run web studio in Mendocino County, California, building and maintaining websites for small local businesses.",
+        "description": "A family studio in Mendocino County, California — web design, Google Business Profile clean-ups, and the marketing that keeps small-business websites working.",
         "url": "https://phoenixlotus.io/",
         "email": "hello@phoenixlotus.io",
         "image": "https://phoenixlotus.io/og/og-default.png",
         "logo": "https://phoenixlotus.io/logo.png",
         "knowsLanguage": "en",
-        "founder": {
-          "@type": "Person",
-          "name": "Robert Goldberg",
-          "alternateName": "Bobby Goldberg",
-          "jobTitle": "Web designer & developer",
-          "sameAs": [
-            "https://github.com/phoenix-lotus",
-            "https://www.linkedin.com/in/robert-g-838955193"
-          ]
-        },
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Robert Goldberg",
+            "alternateName": "Bobby Goldberg",
+            "jobTitle": "Technical architecture & build",
+            "sameAs": [
+              "https://github.com/phoenix-lotus",
+              "https://www.linkedin.com/in/robert-g-838955193"
+            ]
+          },
+          {
+            "@type": "Person",
+            "name": "Katie Goldberg",
+            "jobTitle": "Writer & editor"
+          }
+        ],
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": "Mendocino County, California"

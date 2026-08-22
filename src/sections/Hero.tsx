@@ -1,10 +1,14 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowRight, Sparkles } from 'lucide-react'
 import AuroraBackground from '@/components/AuroraBackground'
-import AnimatedRoles from '@/components/AnimatedRoles'
 import GradientButton from '@/components/GradientButton'
-import GradientText from '@/components/GradientText'
 import SocialLinks from '@/components/SocialLinks'
+import TypewriterWords from '@/components/TypewriterWords'
+
+// Module-level so the array identity is stable — TypewriterWords keys its
+// timer effect on `words`, and a fresh literal per render would reschedule
+// the pending timeout on every parent re-render.
+const TYPEWRITER_WORDS = ['Web design', 'SEO', 'Marketing'] as const
 import { site } from '@/data/site'
 import { EASE } from '@/lib/motion'
 
@@ -18,8 +22,6 @@ const item = {
 }
 
 export default function Hero() {
-  const [before, after] = site.tagline.split(site.taglineAccent)
-
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16">
       <AuroraBackground />
@@ -34,43 +36,45 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-phoenix-600 opacity-70" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-phoenix-600" />
             </span>
-            {site.location} · Web design &amp; development
+            {site.location} · Web design &amp; marketing
           </motion.p>
 
+          {/* The animated slot sits on its own line so typing never reflows
+              the rest of the sentence — the words differ in width, and a
+              heading that shifts mid-sentence reads as broken, not animated. */}
           <motion.h1 variants={item} className="text-hero font-extrabold text-ink">
-            {before}
-            <GradientText>{site.taglineAccent}</GradientText>
-            {after}
+            <span className="sr-only">
+              Web design, SEO, and marketing for your business, done right.
+            </span>
+            <span aria-hidden="true">
+              <TypewriterWords words={TYPEWRITER_WORDS} />
+              <br />
+              for your business, done right.
+            </span>
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 text-xl font-medium text-ink-soft sm:text-2xl">
-            {/* Mobile: punchy brand + rotating services */}
-            <span className="sm:hidden">
-              PhoenixLotus{' '}
-              <AnimatedRoles roles={['web studio', 'design', 'SEO']} className="font-display font-bold" />
-            </span>
-            {/* Desktop: brand name, with "Studio" itself as the rotating word */}
-            <span className="hidden sm:inline">
-              PhoenixLotus Web{' '}
-              <AnimatedRoles
-                roles={['Studio', 'design', 'hosting', 'SEO']}
-                className="font-display font-bold"
-              />
-            </span>
+            {site.heroSub}
           </motion.p>
 
-          <motion.p variants={item} className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
+          <motion.p
+            variants={item}
+            className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft"
+          >
             {site.blurb}
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <motion.div
+            variants={item}
+            className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+          >
             <GradientButton to="/services" size="lg" magnetic>
               Services &amp; pricing
               <ArrowRight size={18} />
             </GradientButton>
             <GradientButton to="/process" size="lg" variant="glass">
               <Sparkles size={16} className="text-phoenix-600" />
-              How I work
+              How we work
             </GradientButton>
           </motion.div>
 
@@ -90,7 +94,10 @@ export default function Hero() {
         transition={{ delay: 1.4, duration: 0.8 }}
       >
         <span className="font-mono text-[10px] uppercase tracking-[0.25em]">Scroll</span>
-        <motion.span animate={{ y: [0, 6, 0] }} transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}>
+        <motion.span
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+        >
           <ArrowDown size={16} />
         </motion.span>
       </motion.a>

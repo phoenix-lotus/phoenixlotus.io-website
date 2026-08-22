@@ -11,7 +11,7 @@ import { THEME } from '@/lib/themes'
 import { EASE } from '@/lib/motion'
 import { cn } from '@/lib/cn'
 
-const TITLE = 'How I work — PhoenixLotus Web Studio'
+const TITLE = 'How we work — PhoenixLotus Web Studio'
 const DESCRIPTION =
   'The method behind a PhoenixLotus rebuild: a forensic audit of your current site, a facts table where nothing unconfirmed ships as fact, a real working build, and a private preview you see first.'
 
@@ -34,13 +34,13 @@ export default function Process() {
 
       <div className="container-page">
         <SectionHeading
-          eyebrow="How I work"
+          eyebrow="How we work"
           title={
             <>
-              The method, since I <GradientText>can’t show you the work</GradientText>
+              The method, since we <GradientText>can’t show you the work</GradientText>
             </>
           }
-          intro="There's no gallery of client sites on here, and that's deliberate rather than an omission. So here's the process itself instead — in enough detail that you can hold me to it."
+          intro="There's no gallery of client sites on here, and that's deliberate rather than an omission. So here's the process itself instead — in enough detail that you can hold us to it."
         />
 
         {/* Why the work isn't shown */}
@@ -51,7 +51,7 @@ export default function Process() {
             </span>
             <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-ink-soft">
               <p>
-                The rebuilds I’ve done for local businesses were built on spec — at my expense,
+                The rebuilds we’ve done for local businesses were built on spec — at our expense,
                 before anyone was asked for anything. Each one sits on real hosting behind a
                 passphrase: not indexed, disallowed in robots.txt, invisible to anyone without the
                 phrase.
@@ -64,7 +64,7 @@ export default function Process() {
                 either.
               </p>
               <p className="text-ink">
-                So instead of showing you work I don’t have permission to show, here is exactly how
+                So instead of showing you work we don’t have permission to show, here is exactly how
                 it gets made.
               </p>
             </div>
@@ -112,42 +112,41 @@ export default function Process() {
           })}
         </ol>
 
-        {/* The objection I can't answer with a reference */}
+        {/* The objection we can't answer with a reference */}
         <Reveal className="mt-24">
           <div className="rounded-2xl border border-line bg-warm/50 p-6 backdrop-blur sm:p-8">
             <p className="font-mono text-xs uppercase tracking-widest text-muted">
               The fair question
             </p>
             <h2 className="mt-3 font-display text-2xl font-bold text-ink sm:text-3xl">
-              “You’re one person. What happens if you’re not around?”
+              “You’re a small studio. What happens if you’re not around?”
             </h2>
             <div className="mt-5 max-w-3xl space-y-4 text-lg leading-relaxed text-ink-soft">
               <p>
-                That’s the right question, and it deserves a plain promise before anything
-                clever: during business hours — Monday through Friday, 9 to 5 — you get a human,
-                and the human is me. Your message doesn’t go to a ticket queue or a help desk; it
-                goes to the person who built your site. PhoenixLotus is a family company — I
-                founded it and run the builds, Katie writes and edits — so the person who answers
-                is also the person accountable.
+                Our guarantee: during business hours, Monday through Friday, 9 to 5, we are
+                available for any and all business questions. Your message doesn’t go to a ticket
+                queue or a help desk, but straight to us. PhoenixLotus is a family studio founded
+                by Robert and Katie Goldberg, so the person who answers is also the person
+                accountable.
               </p>
               <p>
                 Outside those hours the studio doesn’t go dark. It runs with an AI staff: every
                 project’s full history lives in a system that never forgets it, automated checks
-                run against every site’s health and every deploy whether I’m at the desk or not,
+                run against every site’s health and every deploy whether anyone’s at the desk or not,
                 follow-ups schedule themselves, and every change gets a second read before it
                 ships. If you need a staffed phone at midnight, a big agency is still the honest
-                recommendation — but “one person” undersells what’s actually on shift here.
+                recommendation — but “a small studio” undersells what’s actually on shift here.
               </p>
               <p>
-                And being remote never means being unreachable: the laptop comes with me
-                everywhere, and Starlink keeps me connected whether I’m in the redwoods or out on
-                the coast. Still, the structural risk deserves a structural answer:
+                And being remote never means being unreachable: the laptop comes along
+                everywhere, and Starlink keeps us connected in the redwoods or out on the coast.
+                Still, the structural risk deserves a structural answer:
               </p>
               <p>
-                What I can do is make being wrong about me survivable. What you end up holding is
-                ordinary web files on ordinary hosting, in your own accounts, in a stack any
-                competent developer can pick up — not a proprietary system only I can log into. The
-                monthly plans are month-to-month for the same reason.
+                What we can do is make being wrong about us survivable. What you end up holding
+                is ordinary web files on ordinary hosting, in your own accounts, in a stack any
+                competent developer can pick up — not a proprietary system only we can log into.
+                The monthly plans are month-to-month for the same reason.
               </p>
             </div>
           </div>
@@ -159,7 +158,7 @@ export default function Process() {
               Want this pointed at <GradientText>your site?</GradientText>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">
-              Send me the address and what’s frustrating you about it. The audit is where every one
+              Send us the address and what’s frustrating you about it. The audit is where every one
               of these starts.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

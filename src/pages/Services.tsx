@@ -51,7 +51,7 @@ export default function Services() {
               Quoted per project
             </p>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              I don’t publish a build price, because I don’t have an honest one to publish. A
+              We don’t publish a build price, because we don’t have an honest one to publish. A
               five-page site for a shop and a bilingual site with online booking and payments are
               not the same job, and a headline number would only be right for one of them. The quote
               comes after the audit, when we both know what’s actually being built.
@@ -74,7 +74,7 @@ export default function Services() {
                 Keeping it <GradientText>running</GradientText>
               </>
             }
-            intro="Three ways I stay on after launch — hosting and updates at the bottom, search and social work stacked on top. Picking none of them is a real option; the site is yours either way."
+            intro="Three ways we stay on after launch — hosting and updates at the bottom, search and social work stacked on top. Picking none of them is a real option; the site is yours either way."
           />
 
           <Stagger as="ul" className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -164,8 +164,9 @@ export default function Services() {
               Not sure which <GradientText>you need?</GradientText>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">
-              Tell me about the business and what the current site isn’t doing for you. If it’s a
-              fit I’ll say what I’d change and what it would cost. If it isn’t, I’ll say that too.
+              Tell us about the business and what the current site isn’t doing for you. If it’s a
+              fit we’ll say what we’d change and what it would cost. If it isn’t, we’ll say that
+              too.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <GradientButton to="/#contact" size="lg" magnetic>
@@ -173,7 +174,7 @@ export default function Services() {
                 <ArrowRight size={18} />
               </GradientButton>
               <GradientButton to="/process" size="lg" variant="glass">
-                See how I work
+                See how we work
               </GradientButton>
             </div>
           </div>

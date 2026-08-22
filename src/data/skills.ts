@@ -70,8 +70,12 @@ export const facts = [
   // earlier PhoenixLotus Media name, git-dated 2020-11 in
   // ~/Code/DevOps/PhoenixLotusMedia/clients/. It is NOT a founding year and
   // must never be rendered as one; there is no founding year on record.
-  { value: '2019', label: 'first site built' },
-  { value: '2020', label: 'first paying clients' },
-  { value: '8', label: 'projects built' },
+  // Labels attribute these to Robert BY NAME since 2026-08-20: the About
+  // section now speaks as the studio, and under studio voice unattributed
+  // tiles read as studio milestones — implying a founding date, which is
+  // exactly what the note above forbids.
+  { value: '2019', label: "Robert's first site built" },
+  { value: '2020', label: "Robert's first paying clients" },
+  { value: '8', label: 'projects Robert built' },
   { value: 'Family', label: 'owned & operated' },
 ]
