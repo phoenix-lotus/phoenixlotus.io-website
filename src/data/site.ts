@@ -41,7 +41,7 @@ export const site = {
   // directly above this, and saying "Katie is the writer and editor"
   // twice in adjacent paragraphs reads as copy-paste.
   blurb2:
-    'The honest version of the track record: Robert has built and shipped sites for paying clients going back to 2020 — small-business sites and a retail storefront with real checkout — and his own software products since. Those early client sites have long since come down. So we’re not going to hand you a portfolio of other people’s work and ask you to draw conclusions from it. What we can show you is exactly how the work gets done.',
+    'The honest version of the track record: Robert has built and shipped sites for paying clients going back to 2020 — a Santa Rosa party-rental company, and an artist’s storefront with a real cart and checkout — and his own software products since. Both of those client sites have long since come down, the way most small-business sites eventually do, so they’re here as case studies rather than live links. The spec rebuilds we’ve done for local businesses stay private unless the owner says otherwise. What we can always show you is exactly how the work gets done.',
   socials: {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',

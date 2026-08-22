@@ -333,15 +333,51 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'celestial-opalescence',
+    title: 'Celestial Opalescence',
+    featured: false,
+    order: 8,
+    tagline: 'Paid client work, 2020. A real storefront, with real checkout.',
+    description:
+      'An online storefront built for an artist selling original work — an OpenCart build with a custom theme and a working cart and checkout. The "retail storefront with real checkout" the studio\u2019s track record refers to.',
+    longDescription: [
+      'A 2020 build for an artist selling original pieces: a full OpenCart 3.0.3.2 storefront with a custom-themed front end, product catalog, cart, and a real checkout path — not a brochure site with a contact form bolted on.',
+      'It is the concrete answer to "have you actually shipped commerce?" The storefront is long since offline and the domain has lapsed, so there is no live link to give; the source and the custom theme are archived. The commerce patterns here show up again, far more sophisticated, in SmileCart and Fancy\u2019s Studio.',
+    ],
+    role: 'Solo builder (client work)',
+    year: '2020',
+    tech: ['OpenCart 3.0.3.2', 'PHP', 'MySQL', 'Custom CSS theme'],
+    highlights: [
+      'A working cart and checkout, not a contact form',
+      'Custom-themed OpenCart front end over the stock template',
+      'Product catalog built around the client\u2019s own photography',
+    ],
+    status: 'archived',
+    category: ['early', 'client'],
+    links: {},
+    colorTheme: 'lotus',
+    // No screenshot: rendering the storefront needs PHP + MySQL, and the only
+    // images in the archive are the client's own watermarked artwork -- hers,
+    // not the studio's work to display. A fallback frame is the honest option.
+    media: [
+      {
+        type: 'fallback',
+        alt: 'Celestial Opalescence — artist storefront with checkout (2020)',
+        frame: 'browser',
+        aspect: '16/10',
+      },
+    ],
+  },
+  {
     slug: 'happy-hoppers',
     title: 'Happy Hoppers',
     featured: false,
     order: 7,
-    tagline: 'Where it all started.',
+    tagline: 'Paid client work, 2019. Where it all started.',
     description:
-      'The origin story — an early (2019) website for a bounce-house and party-rental business. Robert’s first real build for a live venture, and the entrepreneurial spark behind everything else on this page.',
+      'A website for a Santa Rosa bounce-house and party-rental company, first stood up in 2019 — client work, and the entrepreneurial spark behind everything else on this page.',
     longDescription: [
-      'Happy Hoppers Rentals is the earliest project in this portfolio and the entrepreneurial spark behind it — a website for a bounce-house and party-rental business, first stood up in 2019. It’s here as an origin story rather than a technical showcase: the moment of building something real, for a real audience, and shipping it.',
+      'The earliest project in this portfolio, and real paid client work: a website for a Santa Rosa bounce-house and party-rental company, first stood up in 2019. Static HTML, hand-written CSS, and a mobile stylesheet — modest by current standards, and shipped for a business that depended on it.',
       'The through-line from here to the current work is entrepreneurial, not architectural. The instinct visible in Happy Hoppers — take a concrete local business, put it online, make it easy for a customer to say yes — is the same one that shows up, far more sophisticated, in SmileCart, Inkloom, and Fancy’s Studio. The starting point of the rise-and-grow arc.',
     ],
     role: 'Solo builder (early work)',
@@ -356,13 +392,26 @@ export const projects: Project[] = [
     category: ['early', 'client'],
     links: {},
     colorTheme: 'aurora',
-    media: [{ type: 'fallback', alt: 'Happy Hoppers rentals — early work', frame: 'browser', aspect: '16/10' }],
+    media: [
+      {
+        type: 'screenshot',
+        // Captured from the preserved 2019 source, with the photographs
+        // neutralized: the real hero is a crowd shot of identifiable
+        // children and the images are stock/template placeholders, so
+        // republishing them here would mean redistributing photos we hold
+        // no license or release for. The layout and type ARE the work.
+        src: '/media/projects/happy-hoppers/home.webp',
+        alt: 'Happy Hoppers — 2019 site layout, photography neutralized',
+        frame: 'browser',
+        aspect: '16/10',
+      },
+    ],
   },
   {
     slug: 'gigapet',
     title: 'Gigapet',
     featured: false,
-    order: 8,
+    order: 9,
     tagline: 'A festival totem that loves to be fed light and music.',
     description:
       'A virtual pet built for a giant LED totem at an EDM festival — it hears the music through a mic, detects the drop, and dances harder the better the set gets. The full pet-brain runs live in the browser: a real bass-flux drop detector reacting to real audio, not a canned animation.',

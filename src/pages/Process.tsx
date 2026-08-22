@@ -37,10 +37,10 @@ export default function Process() {
           eyebrow="How we work"
           title={
             <>
-              The method, since we <GradientText>can’t show you the work</GradientText>
+              The method, since we <GradientText>can’t show you the rebuilds</GradientText>
             </>
           }
-          intro="There's no gallery of client sites on here, and that's deliberate rather than an omission. So here's the process itself instead — in enough detail that you can hold us to it."
+          intro="The early client work is on the site as case studies, but the recent rebuilds aren't — and that's deliberate rather than an omission. So here's the process itself instead, in enough detail that you can hold us to it."
         />
 
         {/* Why the work isn't shown */}

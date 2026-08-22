@@ -14,7 +14,7 @@ export default function FeaturedWork() {
               What Robert has <GradientText>actually built</GradientText>
             </>
           }
-          intro="Robert’s own products — each one solo, end to end. The rebuilds we’ve done for local businesses aren’t here: those were built on spec, and they stay private unless the owner decides otherwise. Tap any one for the full story."
+          intro="Robert’s own products, each one solo end to end, plus the earliest paid client work. The spec rebuilds we’ve done for local businesses aren’t here — those stay private unless the owner decides otherwise. Tap any one for the full story."
         />
 
         <div className="mt-16 space-y-24 md:mt-20 md:space-y-32">

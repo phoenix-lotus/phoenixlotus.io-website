@@ -63,7 +63,7 @@ export const facts = [
   // one launched and currently live) and had already been corrected once for
   // exactly this class of error (commit 62b562f, re: DrafTech — since
   // removed from the shelf; the lesson predates and outlives the tile).
-  // "Built" is true of all 8 regardless of stage, so it doesn't need
+  // "Built" is true of all 9 regardless of stage, so it doesn't need
   // re-verifying as each project moves.
   //
   // 2020 is the first PAID client work — Evan Fowler and Sarai, under the
@@ -76,6 +76,6 @@ export const facts = [
   // exactly what the note above forbids.
   { value: '2019', label: "Robert's first site built" },
   { value: '2020', label: "Robert's first paying clients" },
-  { value: '8', label: 'projects Robert built' },
+  { value: '9', label: 'projects Robert built' },
   { value: 'Family', label: 'owned & operated' },
 ]
