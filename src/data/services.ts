@@ -90,3 +90,23 @@ export const adsAddOn =
 
 export const terms =
   'Every monthly plan is month-to-month. Cancel anytime with 30 days notice, and your domain and files stay yours either way.'
+
+/**
+ * The platform stance, published 2026-08-22 (owner decision, Bobby).
+ *
+ * Deliberately scoped to what the studio will assess and recommend. It
+ * never claims to have built on any named platform, because there is no
+ * shippable evidence for that claim: the only commerce work in
+ * `projects.ts` is a 2020 OpenCart store that is long offline, and
+ * `why-phoenixlotus.md`'s REJECTED list bans unverified capability claims
+ * about identifiable third-party products along with anything implying
+ * tenure. A recommendation is a claim about judgment, which the workup
+ * actually produces (see plx-workup §5).
+ *
+ * The two surcharge figures are hand-copied from the pitch kit's
+ * rateCard.ts, same rule as `plans` above, and both have matching entries
+ * in scripts/check-prices.mjs's ALLOWED list — that script hard-fails this
+ * repo's build if the two ever drift apart.
+ */
+export const platformNote =
+  'Every price here covers a site built the way we build by default: ordinary files, hosting included. A shop with real inventory belongs on Shopify. An owner who publishes every week may be better off on WordPress. If Squarespace or Wix is already working for you, remodeling what you have can beat replacing it. We’ll tell you which fits once we’ve looked at your business, and the plan adjusts from there: $30/mo more where you pay the platform directly, $90/mo more on managed WordPress, where hosting is included. On a platform you pay for yourself, the account and everything in it is already yours.'

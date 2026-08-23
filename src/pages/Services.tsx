@@ -5,7 +5,7 @@ import GradientButton from '@/components/GradientButton'
 import GradientText from '@/components/GradientText'
 import SectionHeading from '@/components/SectionHeading'
 import { Reveal, Stagger } from '@/components/Reveal'
-import { adsAddOn, gbpSetup, plans, terms } from '@/data/services'
+import { adsAddOn, gbpSetup, plans, platformNote, terms } from '@/data/services'
 import { site } from '@/data/site'
 import { THEME } from '@/lib/themes'
 import { EASE, fadeUp } from '@/lib/motion'
@@ -119,6 +119,10 @@ export default function Services() {
 
           <Reveal className="mt-6">
             <p className="text-sm leading-relaxed text-muted">{terms}</p>
+          </Reveal>
+
+          <Reveal className="mt-4">
+            <p className="max-w-3xl text-sm leading-relaxed text-muted">{platformNote}</p>
           </Reveal>
         </div>
 

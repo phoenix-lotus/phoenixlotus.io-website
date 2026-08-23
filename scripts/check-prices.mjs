@@ -28,6 +28,8 @@ const ALLOWED = [
   { amount: 450, source: 'EMAIL_SETUP_PRICE' },
   { amount: 75, source: 'EMAIL_MONTHLY_PRICE' },
   { amount: 149, source: 'ADS_ADDON_FOOTNOTE.floor', context: /ad spend/i },
+  { amount: 30, source: 'HOSTED_PLATFORM_SURCHARGE_PRICE' },
+  { amount: 90, source: 'MANAGED_WORDPRESS_SURCHARGE_PRICE' },
 ]
 
 const RETIRED = {
