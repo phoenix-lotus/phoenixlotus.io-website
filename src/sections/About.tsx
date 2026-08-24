@@ -15,7 +15,7 @@ import { useReveal } from '@/lib/useReveal'
 // repurposing those fields for two people.
 const TEAM = [
   { name: 'Robert Goldberg', role: site.role },
-  { name: 'Katie Goldberg', role: 'Chief writer and editor' },
+  { name: 'Katie Goldberg', role: 'Writer & Editor' },
 ]
 
 export default function About() {
