@@ -44,10 +44,10 @@ export default function Hero() {
               heading that shifts mid-sentence reads as broken, not animated. */}
           <motion.h1 variants={item} className="text-hero font-extrabold text-ink">
             <span className="sr-only">
-              Web design, SEO, and marketing for your business, done right.
+              Local web design, SEO, and marketing for your business, done right.
             </span>
             <span aria-hidden="true">
-              <TypewriterWords words={TYPEWRITER_WORDS} />
+              Local <TypewriterWords words={TYPEWRITER_WORDS} />
               <br />
               for your business, done right.
             </span>

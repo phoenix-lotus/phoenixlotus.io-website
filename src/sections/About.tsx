@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MapPin, Plane } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import { Reveal, Stagger } from '@/components/Reveal'
 import Logo from '@/components/Logo'
@@ -91,9 +91,6 @@ export default function About() {
               <div className="flex flex-wrap gap-2 text-sm">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 backdrop-blur">
                   <MapPin size={14} /> {site.location}
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 backdrop-blur">
-                  <Plane size={14} /> Robert — licensed pilot
                 </span>
               </div>
             </div>
