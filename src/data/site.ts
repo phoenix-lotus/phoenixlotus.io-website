@@ -2,7 +2,13 @@ export const site = {
   name: 'Robert Goldberg',
   shortName: 'PhoenixLotus',
   studioName: 'PhoenixLotus Web Studio',
-  role: 'Web design & marketing',
+  // Robert's personal descriptor -- consumed only by the About card
+  // (src/sections/About.tsx's TEAM list, next to his name). The studio's
+  // own service positioning ("Web design & marketing") lives separately
+  // in homeTitle/description below and Hero.tsx's eyebrow badge -- those
+  // are what the business sells, not Robert's personal title, and don't
+  // derive from this field.
+  role: 'Full-stack web developer',
   location: 'Mendocino County, CA',
   email: 'hello@phoenixlotus.io',
   phone: '707-671-6399',
