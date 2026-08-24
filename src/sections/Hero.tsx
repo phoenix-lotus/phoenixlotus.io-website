@@ -57,13 +57,6 @@ export default function Hero() {
             {site.heroSub}
           </motion.p>
 
-          <motion.p
-            variants={item}
-            className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft"
-          >
-            {site.blurb}
-          </motion.p>
-
           <motion.div
             variants={item}
             className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"

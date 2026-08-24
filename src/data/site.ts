@@ -5,6 +5,7 @@ export const site = {
   role: 'Web design & marketing',
   location: 'Mendocino County, CA',
   email: 'hello@phoenixlotus.io',
+  phone: '707-671-6399',
   url: 'https://phoenixlotus.io',
   // No longer the hero H1 (that's built in Hero.tsx around the typewriter
   // slot) — still rendered verbatim in the footer.
@@ -46,6 +47,7 @@ export const site = {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',
     email: 'mailto:hello@phoenixlotus.io',
+    phone: 'tel:+17076716399',
   },
 } as const
 

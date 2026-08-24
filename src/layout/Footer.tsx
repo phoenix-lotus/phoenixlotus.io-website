@@ -41,6 +41,11 @@ export default function Footer() {
                     {site.email}
                   </a>
                 </li>
+                <li>
+                  <a href={site.socials.phone} className="text-ink-soft transition-colors hover:text-phoenix-600">
+                    {site.phone}
+                  </a>
+                </li>
                 <li className="text-ink-soft">{site.location}</li>
               </ul>
             </div>
