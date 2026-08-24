@@ -1,8 +1,9 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Facebook, Github, Linkedin, Mail } from 'lucide-react'
 import { site } from '@/data/site'
 import { cn } from '@/lib/cn'
 
 const links = [
+  { href: site.socials.facebook, label: 'Facebook', Icon: Facebook },
   { href: site.socials.github, label: 'GitHub', Icon: Github },
   { href: site.socials.linkedin, label: 'LinkedIn', Icon: Linkedin },
   { href: site.socials.email, label: 'Email', Icon: Mail },

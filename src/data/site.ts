@@ -52,6 +52,9 @@ export const site = {
   socials: {
     github: 'https://github.com/phoenix-lotus',
     linkedin: 'https://www.linkedin.com/in/robert-g-838955193',
+    // The studio Page (created 2026-08-23). Also in index.html's JSON-LD
+    // sameAs — change both together, same rule as homeTitle.
+    facebook: 'https://www.facebook.com/phoenixlotuswebstudio',
     email: 'mailto:hello@phoenixlotus.io',
     phone: 'tel:+17076716399',
   },

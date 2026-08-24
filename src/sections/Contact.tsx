@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import { Reveal } from '@/components/Reveal'
 import GradientText from '@/components/GradientText'
@@ -9,6 +9,7 @@ import { useReveal } from '@/lib/useReveal'
 const directLinks = [
   { Icon: Mail, label: site.email, href: site.socials.email },
   { Icon: Phone, label: site.phone, href: site.socials.phone },
+  { Icon: Facebook, label: 'Facebook', href: site.socials.facebook },
   { Icon: Github, label: 'github.com/phoenix-lotus', href: site.socials.github },
   { Icon: Linkedin, label: 'LinkedIn', href: site.socials.linkedin },
 ]
