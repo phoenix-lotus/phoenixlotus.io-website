@@ -9,6 +9,15 @@ import { facts } from '@/data/skills'
 import { fadeUp } from '@/lib/motion'
 import { useReveal } from '@/lib/useReveal'
 
+// site.name/site.role stay Robert-only (footer copyright, <title> tags, the
+// JSON-LD founder/legalName) — this card is the one place both co-founders
+// are introduced together, so it gets its own short list rather than
+// repurposing those fields for two people.
+const TEAM = [
+  { name: 'Robert Goldberg', role: site.role },
+  { name: 'Katie Goldberg', role: 'Chief writer and editor' },
+]
+
 export default function About() {
   const { ref, inView } = useReveal()
   return (
@@ -37,16 +46,24 @@ export default function About() {
               <div className="grid h-20 w-20 place-items-center rounded-2xl bg-white/20 backdrop-blur">
                 <Logo showWord={false} className="[&_svg]:h-12 [&_svg]:w-12" />
               </div>
-              <p className="mt-6 font-display text-3xl font-extrabold leading-tight">
-                {site.name}
-              </p>
-              <p className="mt-1 text-white/85">{site.role}</p>
+
+              <div className="mt-6 space-y-4">
+                {TEAM.map((person) => (
+                  <div key={person.name}>
+                    <p className="font-display text-2xl font-extrabold leading-tight">
+                      {person.name}
+                    </p>
+                    <p className="mt-1 text-white/85">{person.role}</p>
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-6 flex flex-wrap gap-2 text-sm">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 backdrop-blur">
                   <MapPin size={14} /> {site.location}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 backdrop-blur">
-                  <Plane size={14} /> Licensed pilot
+                  <Plane size={14} /> Robert — licensed pilot
                 </span>
               </div>
             </div>
