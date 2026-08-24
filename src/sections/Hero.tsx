@@ -8,7 +8,7 @@ import TypewriterWords from '@/components/TypewriterWords'
 // Module-level so the array identity is stable — TypewriterWords keys its
 // timer effect on `words`, and a fresh literal per render would reschedule
 // the pending timeout on every parent re-render.
-const TYPEWRITER_WORDS = ['Web design', 'SEO', 'Marketing'] as const
+const TYPEWRITER_WORDS = ['Web design', 'SEO', 'Marketing', 'Advertising'] as const
 import { site } from '@/data/site'
 import { EASE } from '@/lib/motion'
 
@@ -44,7 +44,7 @@ export default function Hero() {
               heading that shifts mid-sentence reads as broken, not animated. */}
           <motion.h1 variants={item} className="text-hero font-extrabold text-ink">
             <span className="sr-only">
-              Local web design, SEO, and marketing for your business, done right.
+              Local web design, SEO, marketing, and advertising for your business, done right.
             </span>
             <span aria-hidden="true">
               Local <TypewriterWords words={TYPEWRITER_WORDS} />
