@@ -11,8 +11,10 @@ npm run updater          # detect → draft edits → refresh screenshots → op
 npm run updater:check    # dry run: print what changed, touch nothing (no LLM, no PR)
 node scripts/updater/run.mjs --rescan       # re-draft every project from current source
 node scripts/updater/run.mjs --notify-only  # detect → open a GitHub issue instead of drafting
-npm run updater:deploy   # AFTER you merge a PR: build + netlify deploy --prod (manual)
 ```
+
+Deploying is not one of them. This repo is Git-connected to Netlify, so merging
+the PR (or otherwise pushing `master`) is what publishes the site.
 
 ## How it works
 
@@ -29,7 +31,8 @@ npm run updater:deploy   # AFTER you merge a PR: build + netlify deploy --prod (
    happyhoppersrentals.com) with headless Chrome → WebP. Private/local apps are
    skipped and noted.
 5. **PR** — commits the edits to a fresh `updater/portfolio-*` branch and opens a
-   **draft** PR. You review, un-draft, merge, then `npm run updater:deploy`.
+   **draft** PR. You review, un-draft, and merge — Netlify builds `master` and
+   publishes on its own.
 
 ## What it will and won't touch
 
@@ -42,7 +45,6 @@ npm run updater:deploy   # AFTER you merge a PR: build + netlify deploy --prod (
 ## Setup
 
 - **GitHub CLI** (`gh`) authenticated — already are (`phoenix-lotus`, `repo` scope).
-- **Netlify CLI** linked — already is (only needed for `updater:deploy`).
 - **Claude CLI** for auto-drafting: `npm i -g @anthropic-ai/claude-code`, then run
   it once to authenticate (uses your subscription — no API key). Without it, the
   bot still runs in notify-only mode and opens an issue with the diffs.

@@ -54,7 +54,7 @@ export function buildPrBody({ applied, appended, screenshots, skippedCapturable 
   L.push('')
   L.push(
     `Drafted by the on-demand updater bot. **Review every change for accuracy and voice before merging.** ` +
-      `Nothing here is live — merge, then run \`npm run updater:deploy\`.`,
+      `Nothing here is live until this is merged — Netlify builds \`master\` and publishes.`,
   )
   L.push('')
 
@@ -113,7 +113,7 @@ export function buildPrBody({ applied, appended, screenshots, skippedCapturable 
   L.push('- [ ] Any `status` change is real')
   L.push('- [ ] Refreshed screenshots look right')
   L.push('- [ ] New-project drafts placed/featured intentionally')
-  L.push('- [ ] Un-draft → merge → `npm run updater:deploy`')
+  L.push('- [ ] Un-draft → merge (Netlify builds `master` and publishes)')
   return L.join('\n')
 }
 
