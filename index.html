@@ -58,7 +58,18 @@
       content="A family studio in Mendocino County, CA — web design, Google Business Profile clean-ups, and the marketing that keeps small-business websites working."
     />
     <meta data-default property="og:url" content="https://phoenixlotus.io/" />
-    <meta property="og:image" content="https://phoenixlotus.io/og/og-default.png" />
+    <!--
+      Versioned filename, not og-default.png. Facebook caches og:image by URL,
+      so the superseded personal card ("Robert Goldberg / Shipping human-first
+      software") kept reappearing in Messenger link previews even after the
+      title and description were already correct. Rename on any redesign.
+      Explicit width/height let Messenger and Slack lay the large card out
+      before the image finishes loading.
+    -->
+    <meta property="og:image" content="https://phoenixlotus.io/og/og-studio.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PhoenixLotus Web Studio — web design for your business, done right. A family studio in Mendocino County, CA." />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Fonts -->
@@ -99,7 +110,7 @@
         "url": "https://phoenixlotus.io/",
         "email": "hello@phoenixlotus.io",
         "telephone": "+1-707-671-6399",
-        "image": "https://phoenixlotus.io/og/og-default.png",
+        "image": "https://phoenixlotus.io/og/og-studio.png",
         "logo": "https://phoenixlotus.io/logo.png",
         "knowsLanguage": "en",
         "founder": [

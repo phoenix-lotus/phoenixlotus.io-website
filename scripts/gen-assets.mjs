@@ -51,12 +51,17 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
     </g>
     <text x="86" y="52" font-family="Verdana, sans-serif" font-size="30" font-weight="700" fill="#f6f2fb">PhoenixLotus Web Studio</text>
   </g>
-  <text x="90" y="330" font-family="Verdana, sans-serif" font-size="90" font-weight="800" fill="#f6f2fb">Robert Goldberg</text>
-  <text x="92" y="410" font-family="Verdana, sans-serif" font-size="40" font-weight="700" fill="url(#aurora)">Shipping human-first software</text>
-  <text x="92" y="486" font-family="Verdana, sans-serif" font-size="28" fill="#c6bcd6">Founder · Web Developer · Designer — Mendocino County, CA</text>
+  <text x="90" y="292" font-family="Verdana, sans-serif" font-size="64" font-weight="800" fill="#f6f2fb">Web design for your</text>
+  <text x="90" y="364" font-family="Verdana, sans-serif" font-size="64" font-weight="800" fill="#f6f2fb">business, done right.</text>
+  <text x="92" y="426" font-family="Verdana, sans-serif" font-size="34" font-weight="700" fill="url(#aurora)">Websites · Google Profiles · Marketing</text>
+  <text x="92" y="476" font-family="Verdana, sans-serif" font-size="26" fill="#c6bcd6">A family studio in Mendocino County, CA</text>
   <rect x="92" y="524" width="1016" height="3" rx="1.5" fill="url(#aurora)"/>
-  <text x="92" y="576" font-family="Verdana, sans-serif" font-size="24" fill="#8a7fa0">SmileCart · PlanRoute · Inkloom · HopFiesta · Fancy's Studio</text>
+  <text x="92" y="576" font-family="Verdana, sans-serif" font-size="24" fill="#8a7fa0">Robert &amp; Katie Goldberg · phoenixlotus.io</text>
 </svg>`
-await sharp(Buffer.from(og)).png().toFile(`${PUB}/og/og-default.png`)
+// Filename is versioned on purpose. Facebook caches og:image by URL, so the
+// personal "Robert Goldberg / Shipping human-first software" card kept coming
+// back in Messenger even after the tags changed. A path it has never fetched
+// is the only reliable bust — rename again if this card is ever redesigned.
+await sharp(Buffer.from(og)).png().toFile(`${PUB}/og/og-studio.png`)
 
-console.log('Generated: apple-touch-icon.png, favicon-{16,32}.png, favicon.ico, og/og-default.png')
+console.log('Generated: apple-touch-icon.png, favicon-{16,32}.png, favicon.ico, og/og-studio.png')
