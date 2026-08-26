@@ -20,14 +20,15 @@ const RATE_CARD = join(ROOT, '..', 'phoenixlotus-pitch-kit', 'src', 'content', '
 // context: required nearby text — only for an amount that collides with a
 // retired price, so the figure alone can't prove which price it is.
 const ALLOWED = [
-  { amount: 99, source: 'RATE_CARD.care' },
-  { amount: 179, source: 'RATE_CARD.visibility' },
+  { amount: 149, source: 'RATE_CARD.care' },
+  { amount: 249, source: 'RATE_CARD.visibility' },
   { amount: 449, source: 'RATE_CARD.social' },
   { amount: 450, source: 'GBP_SETUP_PRICE' },
   { amount: 300, source: 'REVIEW_SYSTEM_PRICE' },
   { amount: 450, source: 'EMAIL_SETUP_PRICE' },
   { amount: 75, source: 'EMAIL_MONTHLY_PRICE' },
   { amount: 149, source: 'ADS_ADDON_FOOTNOTE.floor', context: /ad spend/i },
+  { amount: 99, source: 'RENTAL_EMBEDDED_CARE_PRICE', context: /full care plan/i },
   { amount: 30, source: 'HOSTED_PLATFORM_SURCHARGE_PRICE' },
   { amount: 90, source: 'MANAGED_WORDPRESS_SURCHARGE_PRICE' },
   { amount: 229, source: 'RENTAL_STANDARD_PRICE' },
@@ -37,7 +38,12 @@ const ALLOWED = [
 ]
 
 const RETIRED = {
-  149: 'the Care & Hosting price before the 2026-08-15 re-anchor',
+  // 149 removed 2026-08-26: no longer retired. It's RATE_CARD.care's
+  // current price again (full circle — this was the pre-2026-08-15
+  // figure, retired that day, now live again by a separate later
+  // decision), AND it now coincidentally equals ADS_ADDON_FOOTNOTE's
+  // ad-spend floor, unrelated but the same digits. Both ALLOWED entries
+  // for 149 are correct; see rateCard.ts's dated note for the collision.
   199: 'the ads-floor minimum before the 2026-08-15 re-anchor',
   // 449 removed 2026-08-26: no longer retired. It's RATE_CARD.social's
   // current price (raised from $249), now live in ALLOWED above. The
@@ -45,6 +51,11 @@ const RETIRED = {
   // (the old Local Visibility price) — a coincidence of the two ladders
   // reusing a digit, not the same claim coming back.
   849: 'the Social price before the 2026-08-15 re-anchor',
+  // 179 deliberately NOT added here. RATE_CARD.visibility moved off 179
+  // to 249 on 2026-08-26, so a stray $179 on the site should fail loudly
+  // — leaving it untracked (absent from both ALLOWED and RETIRED) gets
+  // the generic "traces to no rateCard.ts constant" message, which is
+  // accurate and doesn't need a named entry to be useful.
   379: 'RENTAL_STANDARD_SOCIAL_PRICE before the 2026-08-26 social-tier raise',
 }
 

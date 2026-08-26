@@ -21,7 +21,7 @@ const offers = [
     Icon: ShieldCheck,
     theme: 'lotus',
     title: 'Keep it running',
-    body: 'Hosting, security updates, content changes when you need them, and a monthly health report — so nothing quietly breaks or goes stale while nobody’s watching. From $99/month.',
+    body: 'Hosting, security updates, content changes when you need them, and a monthly health report — so nothing quietly breaks or goes stale while nobody’s watching. From $149/month.',
     to: '/services',
     cta: 'See the plans',
   },

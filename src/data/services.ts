@@ -23,7 +23,7 @@ export const plans: Plan[] = [
   {
     key: 'care',
     eyebrow: 'Care & hosting',
-    price: '$99',
+    price: '$149',
     cadence: '/month',
     body: 'Hosting, uptime monitoring, security and dependency updates, up to two content updates a month, and a monthly health report — plus a real person on the other end during business hours, Monday to Friday.',
     includes: [
@@ -38,7 +38,7 @@ export const plans: Plan[] = [
   {
     key: 'visibility',
     eyebrow: 'Care + local visibility',
-    price: '$179',
+    price: '$249',
     cadence: '/month',
     body: 'Everything in Care & Hosting, plus Google Business Profile management, local citations, and one to two SEO-tuned pages or posts a month.',
     includes: [

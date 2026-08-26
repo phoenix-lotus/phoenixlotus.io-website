@@ -21,7 +21,7 @@ import { cn } from '@/lib/cn'
 
 const TITLE = 'Services & pricing — PhoenixLotus Web Studio'
 const DESCRIPTION =
-  'Published house pricing for a Mendocino County web studio: care and hosting from $99/mo, buy or split the build, rent a site from $229/mo, and a one-time Google Business Profile setup.'
+  'Published house pricing for a Mendocino County web studio: care and hosting from $149/mo, buy or split the build, rent a site from $229/mo, and a one-time Google Business Profile setup.'
 
 export default function Services() {
   return (
