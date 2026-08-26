@@ -52,7 +52,7 @@ export const plans: Plan[] = [
   {
     key: 'social',
     eyebrow: 'Care + visibility + social',
-    price: '$249',
+    price: '$449',
     cadence: '/month',
     body: 'Everything above, plus three posts a week across two platforms, a content calendar, and a monthly engagement summary.',
     includes: [
@@ -137,7 +137,7 @@ export const paymentOptions: PaymentOption[] = [
 ]
 
 export const paymentTerms =
-  'The buyout on a rented site is the build price we quoted for it, minus every site-rent dollar you’ve paid, and never less than three months’ rent. Leaving a rental during the first year costs three months’ rent, stated up front rather than buried in a term clause. A rented standard site can carry the upper care plans too: $309/month with Local Visibility, $379/month with Visibility + Social — those replace each other, they don’t add. If the numbers say buying beats renting for how long you’ll keep the site, we’ll tell you that before you sign anything.'
+  'The buyout on a rented site is the build price we quoted for it, minus every site-rent dollar you’ve paid, and never less than three months’ rent. Leaving a rental during the first year costs three months’ rent, stated up front rather than buried in a term clause. A rented standard site can carry the upper care plans too: $309/month with Local Visibility, $579/month with Visibility + Social — those replace each other, they don’t add. If the numbers say buying beats renting for how long you’ll keep the site, we’ll tell you that before you sign anything.'
 
 /**
  * The platform stance, published 2026-08-22 (owner decision, Bobby).

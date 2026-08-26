@@ -22,7 +22,7 @@ const RATE_CARD = join(ROOT, '..', 'phoenixlotus-pitch-kit', 'src', 'content', '
 const ALLOWED = [
   { amount: 99, source: 'RATE_CARD.care' },
   { amount: 179, source: 'RATE_CARD.visibility' },
-  { amount: 249, source: 'RATE_CARD.social' },
+  { amount: 449, source: 'RATE_CARD.social' },
   { amount: 450, source: 'GBP_SETUP_PRICE' },
   { amount: 300, source: 'REVIEW_SYSTEM_PRICE' },
   { amount: 450, source: 'EMAIL_SETUP_PRICE' },
@@ -33,14 +33,19 @@ const ALLOWED = [
   { amount: 229, source: 'RENTAL_STANDARD_PRICE' },
   { amount: 329, source: 'RENTAL_LARGER_PRICE' },
   { amount: 309, source: 'RENTAL_STANDARD_VISIBILITY_PRICE' },
-  { amount: 379, source: 'RENTAL_STANDARD_SOCIAL_PRICE' },
+  { amount: 579, source: 'RENTAL_STANDARD_SOCIAL_PRICE' },
 ]
 
 const RETIRED = {
   149: 'the Care & Hosting price before the 2026-08-15 re-anchor',
   199: 'the ads-floor minimum before the 2026-08-15 re-anchor',
-  449: 'the Local Visibility price before the 2026-08-15 re-anchor',
+  // 449 removed 2026-08-26: no longer retired. It's RATE_CARD.social's
+  // current price (raised from $249), now live in ALLOWED above. The
+  // number the 2026-08-15 re-anchor retired was for a DIFFERENT tier
+  // (the old Local Visibility price) — a coincidence of the two ladders
+  // reusing a digit, not the same claim coming back.
   849: 'the Social price before the 2026-08-15 re-anchor',
+  379: 'RENTAL_STANDARD_SOCIAL_PRICE before the 2026-08-26 social-tier raise',
 }
 
 const SCAN_EXTS = /\.(ts|tsx|css|svg|html|md|json)$/
