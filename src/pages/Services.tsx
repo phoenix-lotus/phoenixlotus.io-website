@@ -5,7 +5,15 @@ import GradientButton from '@/components/GradientButton'
 import GradientText from '@/components/GradientText'
 import SectionHeading from '@/components/SectionHeading'
 import { Reveal, Stagger } from '@/components/Reveal'
-import { adsAddOn, gbpSetup, plans, platformNote, terms } from '@/data/services'
+import {
+  adsAddOn,
+  gbpSetup,
+  paymentOptions,
+  paymentTerms,
+  plans,
+  platformNote,
+  terms,
+} from '@/data/services'
 import { site } from '@/data/site'
 import { THEME } from '@/lib/themes'
 import { EASE, fadeUp } from '@/lib/motion'
@@ -13,7 +21,7 @@ import { cn } from '@/lib/cn'
 
 const TITLE = 'Services & pricing — PhoenixLotus Web Studio'
 const DESCRIPTION =
-  'Published house pricing for a Mendocino County web studio: care and hosting from $99/mo, local visibility, social, and a one-time Google Business Profile setup.'
+  'Published house pricing for a Mendocino County web studio: care and hosting from $99/mo, buy or split the build, rent a site from $229/mo, and a one-time Google Business Profile setup.'
 
 export default function Services() {
   return (
@@ -64,6 +72,50 @@ export default function Services() {
             </div>
           </div>
         </Reveal>
+
+        {/* Ways to pay */}
+        <div className="mt-20">
+          <SectionHeading
+            eyebrow="Ways to pay"
+            title={
+              <>
+                Three ways to <GradientText>pay for it</GradientText>
+              </>
+            }
+            intro="A good site shouldn’t depend on having the whole fee free in one month. The price is the same whichever way you pay — what changes is when the money moves and what you own while it does."
+          />
+
+          <Stagger as="ul" className="mt-12 grid gap-5 lg:grid-cols-3">
+            {paymentOptions.map((option) => {
+              const t = THEME[option.theme]
+              return (
+                <motion.li
+                  key={option.key}
+                  variants={fadeUp}
+                  className="flex flex-col rounded-2xl border border-line bg-surface/60 p-6 backdrop-blur transition-shadow hover:shadow-soft"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className={cn('h-8 w-1.5 rounded-full', t.gradient)} aria-hidden />
+                    <h3 className="font-mono text-xs uppercase tracking-widest text-muted">
+                      {option.eyebrow}
+                    </h3>
+                  </div>
+                  <p className="mt-5 flex items-baseline gap-1.5">
+                    <span className="font-display text-3xl font-extrabold text-ink">
+                      {option.price}
+                    </span>
+                    <span className="text-sm text-ink-soft">{option.cadence}</span>
+                  </p>
+                  <p className="mt-4 leading-relaxed text-ink-soft">{option.body}</p>
+                </motion.li>
+              )
+            })}
+          </Stagger>
+
+          <Reveal className="mt-6">
+            <p className="max-w-3xl text-sm leading-relaxed text-muted">{paymentTerms}</p>
+          </Reveal>
+        </div>
 
         {/* Monthly plans */}
         <div className="mt-20">

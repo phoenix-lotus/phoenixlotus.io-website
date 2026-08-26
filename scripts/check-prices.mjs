@@ -30,6 +30,10 @@ const ALLOWED = [
   { amount: 149, source: 'ADS_ADDON_FOOTNOTE.floor', context: /ad spend/i },
   { amount: 30, source: 'HOSTED_PLATFORM_SURCHARGE_PRICE' },
   { amount: 90, source: 'MANAGED_WORDPRESS_SURCHARGE_PRICE' },
+  { amount: 229, source: 'RENTAL_STANDARD_PRICE' },
+  { amount: 329, source: 'RENTAL_LARGER_PRICE' },
+  { amount: 309, source: 'RENTAL_STANDARD_VISIBILITY_PRICE' },
+  { amount: 379, source: 'RENTAL_STANDARD_SOCIAL_PRICE' },
 ]
 
 const RETIRED = {

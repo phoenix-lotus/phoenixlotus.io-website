@@ -89,7 +89,55 @@ export const adsAddOn =
   'Running paid ads (Google or Meta) is an add-on to Local Visibility or Social rather than a fourth plan, because running ads well needs the other two already in place: 15% of ad spend, $149/mo minimum, covering setup, budget judgment, and creative approval. Percent-of-spend rather than a flat fee keeps our incentive pointed at the results instead of a fixed retainer regardless of budget.'
 
 export const terms =
-  'Every monthly plan is month-to-month. Cancel anytime with 30 days notice, and your domain and files stay yours either way.'
+  'Every monthly plan above is month-to-month. Cancel anytime with 30 days notice, and your domain and files stay yours either way.'
+
+/**
+ * Ways to pay for the build, added 2026-08-26. Figures hand-copied from
+ * the pitch kit's rateCard.ts (RENTAL_STANDARD_PRICE and friends), same
+ * rule as `plans` above, with matching entries in check-prices.mjs's
+ * ALLOWED. The payment plan's dollar threshold between six- and
+ * twelve-month terms is deliberately NOT published here — the site
+ * doesn't publish build prices, and that threshold would be the first
+ * one (it lives in rateCard.ts's PAYMENT_PLAN_FOOTNOTE).
+ */
+export interface PaymentOption {
+  key: string
+  eyebrow: string
+  price: string
+  cadence: string
+  body: string
+  theme: ColorTheme
+}
+
+export const paymentOptions: PaymentOption[] = [
+  {
+    key: 'buy',
+    eyebrow: 'Buy it',
+    price: 'Half + half',
+    cadence: 'quoted per project',
+    body: 'Half at signing, half at launch. Everything is yours at the last payment: the site, the files, the code.',
+    theme: 'phoenix',
+  },
+  {
+    key: 'split',
+    eyebrow: 'Split it',
+    price: 'A third down',
+    cadence: 'then monthly',
+    body: 'The same fee, spread out: a third at signing, the rest in equal monthly payments on autopay. Smaller builds run up to six months; the rest can take the full twelve. Nothing is added for paying over time — the total is the same either way. The care plan stays on while payments run, and the site is yours outright at the last one.',
+    theme: 'ember',
+  },
+  {
+    key: 'rent',
+    eyebrow: 'Rent it',
+    price: '$229',
+    cadence: '/month · from $329 for larger builds',
+    body: 'Nothing down, because the site is already built before we ever show it. $99 of the monthly is the full care plan; the rest is site rent. Twelve months minimum, then month-to-month. Your domain and your content are yours the whole time — the site itself stays ours unless you buy it out.',
+    theme: 'lotus',
+  },
+]
+
+export const paymentTerms =
+  'The buyout on a rented site is the build price we quoted for it, minus every site-rent dollar you’ve paid, and never less than three months’ rent. Leaving a rental during the first year costs three months’ rent, stated up front rather than buried in a term clause. A rented standard site can carry the upper care plans too: $309/month with Local Visibility, $379/month with Visibility + Social — those replace each other, they don’t add. If the numbers say buying beats renting for how long you’ll keep the site, we’ll tell you that before you sign anything.'
 
 /**
  * The platform stance, published 2026-08-22 (owner decision, Bobby).
