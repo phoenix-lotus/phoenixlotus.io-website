@@ -66,8 +66,18 @@ export default function TypewriterWords({
 
   return (
     <span className={cn('inline-flex items-baseline', className)}>
-      {/* zero-width space keeps the line height when zero chars are shown */}
-      <span className="text-gradient">{words[wordIndex].slice(0, chars) || '​'}</span>
+      {/* zero-width space keeps the line height when zero chars are shown.
+          pb/-mb pair is load-bearing, not spacing: .text-gradient paints via
+          bg-clip-text, so a glyph is only visible where the element's own
+          background box reaches. text-hero sets line-height 1.0, which makes
+          that box exactly font-size tall (96px) while the face actually spans
+          118px — so descenders had no background under them and the tail of
+          the "g" in "Web design" / "Marketing" was cut clean off. The padding
+          extends the paint box past the descender; the equal negative margin
+          gives the space straight back so nothing below moves. */}
+      <span className="text-gradient pb-[0.3em] -mb-[0.3em]">
+        {words[wordIndex].slice(0, chars) || '​'}
+      </span>
       <span
         className={cn(
           'ml-1 inline-block w-[3px] self-stretch translate-y-[0.06em] bg-grad-phoenix',
