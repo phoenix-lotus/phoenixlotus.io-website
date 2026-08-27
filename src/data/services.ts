@@ -107,9 +107,37 @@ export interface PaymentOption {
   cadence: string
   body: string
   theme: ColorTheme
+  recommended?: boolean
+  /** Secondary pricing line, kept out of `cadence` so the headline price stays one line. */
+  note?: string
 }
 
+/**
+ * Ordered by what it costs to start, cheapest first, which is also the
+ * order the section recommends them in (owner decision, Bobby,
+ * 2026-08-27: lead with renting). Renting is the only one of the three
+ * a business can start with nothing in hand, so it leads and carries
+ * the recommended flag.
+ */
 export const paymentOptions: PaymentOption[] = [
+  {
+    key: 'rent',
+    eyebrow: 'Rent it',
+    price: '$279',
+    cadence: '/month',
+    note: 'From $379 for larger builds, where there’s booking, a second language, or a shop.',
+    body: 'Nothing down, and no build fee, on a site we’ve already built. $149 of the monthly is the full care plan; the rest is site rent. Twelve months minimum, then month-to-month. Your domain and your content stay yours the whole time. The site itself stays ours unless you buy it out.',
+    theme: 'lotus',
+    recommended: true,
+  },
+  {
+    key: 'split',
+    eyebrow: 'Split it',
+    price: 'A third down',
+    cadence: 'then monthly',
+    body: 'The same fee, spread out: a third at signing, the rest in equal monthly payments on autopay. Smaller builds run up to six months; the rest can take the full twelve. Nothing is added for paying over time, so the total matches paying up front. The care plan stays on while payments run, and the site is yours outright at the last one.',
+    theme: 'ember',
+  },
   {
     key: 'buy',
     eyebrow: 'Buy it',
@@ -117,22 +145,6 @@ export const paymentOptions: PaymentOption[] = [
     cadence: 'quoted per project',
     body: 'Half at signing, half at launch. Everything is yours at the last payment: the site, the files, the code.',
     theme: 'phoenix',
-  },
-  {
-    key: 'split',
-    eyebrow: 'Split it',
-    price: 'A third down',
-    cadence: 'then monthly',
-    body: 'The same fee, spread out: a third at signing, the rest in equal monthly payments on autopay. Smaller builds run up to six months; the rest can take the full twelve. Nothing is added for paying over time — the total is the same either way. The care plan stays on while payments run, and the site is yours outright at the last one.',
-    theme: 'ember',
-  },
-  {
-    key: 'rent',
-    eyebrow: 'Rent it',
-    price: '$279',
-    cadence: '/month · from $379 for larger builds',
-    body: 'Nothing down, because the site is already built before we ever show it. $149 of the monthly is the full care plan; the rest is site rent. Twelve months minimum, then month-to-month. Your domain and your content are yours the whole time — the site itself stays ours unless you buy it out.',
-    theme: 'lotus',
   },
 ]
 

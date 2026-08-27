@@ -21,7 +21,7 @@ import { cn } from '@/lib/cn'
 
 const TITLE = 'Services & pricing — PhoenixLotus Web Studio'
 const DESCRIPTION =
-  'Published house pricing for a Mendocino County web studio: care and hosting from $149/mo, buy or split the build, rent a site from $279/mo, and a one-time Google Business Profile setup.'
+  'Published house pricing for a Mendocino County web studio: rent an already-built site from $279/mo, nothing down, twelve-month minimum. Or buy the build outright and split the fee. Care and hosting from $149/mo.'
 
 export default function Services() {
   return (
@@ -59,8 +59,7 @@ export default function Services() {
               Quoted per project
             </p>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              We don’t publish a build price, because we don’t have an honest one to publish. A
-              five-page site for a shop and a bilingual site with online booking and payments are
+              A five-page site for a shop and a bilingual site with online booking and payments are
               not the same job, and a headline number would only be right for one of them. The quote
               comes after the audit, when we both know what’s actually being built.
             </p>
@@ -79,10 +78,10 @@ export default function Services() {
             eyebrow="Ways to pay"
             title={
               <>
-                Three ways to <GradientText>pay for it</GradientText>
+                Start at <GradientText>nothing down</GradientText>
               </>
             }
-            intro="A good site shouldn’t depend on having the whole fee free in one month. The price is the same whichever way you pay — what changes is when the money moves and what you own while it does."
+            intro="The build is the expensive part, and renting means we carry it instead of you. That’s what puts a rented site at $279 a month with nothing up front. Buying the build outright and splitting the fee into monthly payments both stand alongside it."
           />
 
           <Stagger as="ul" className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -92,12 +91,31 @@ export default function Services() {
                 <motion.li
                   key={option.key}
                   variants={fadeUp}
-                  className="flex flex-col rounded-2xl border border-line bg-surface/60 p-6 backdrop-blur transition-shadow hover:shadow-soft"
+                  className={cn(
+                    'flex flex-col rounded-2xl border p-6 transition-shadow',
+                    option.recommended
+                      ? cn('border-lotus-500 bg-surface', t.shadow)
+                      : 'border-line bg-surface/60 backdrop-blur hover:shadow-soft',
+                  )}
                 >
                   <div className="flex items-center gap-3">
-                    <span className={cn('h-8 w-1.5 rounded-full', t.gradient)} aria-hidden />
-                    <h3 className="font-mono text-xs uppercase tracking-widest text-muted">
+                    <span
+                      className={cn('h-8 w-1.5 shrink-0 rounded-full', t.gradient)}
+                      aria-hidden
+                    />
+                    {/* The pill lives inside the h3 so heading navigation announces
+                        "Rent it Recommended" — as a sibling it was a floating word. */}
+                    <h3 className="flex flex-1 items-center gap-3 font-mono text-xs uppercase tracking-widest text-muted">
                       {option.eyebrow}
+                      {option.recommended && (
+                        <span className="ml-auto inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-lotus-500 bg-surface px-2.5 py-1 font-medium tracking-widest text-ink">
+                          <span
+                            className={cn('h-1.5 w-1.5 rounded-full', t.gradient)}
+                            aria-hidden
+                          />
+                          Recommended
+                        </span>
+                      )}
                     </h3>
                   </div>
                   <p className="mt-5 flex items-baseline gap-1.5">
@@ -106,6 +124,7 @@ export default function Services() {
                     </span>
                     <span className="text-sm text-ink-soft">{option.cadence}</span>
                   </p>
+                  {option.note && <p className="mt-1.5 text-sm text-ink-soft">{option.note}</p>}
                   <p className="mt-4 leading-relaxed text-ink-soft">{option.body}</p>
                 </motion.li>
               )
