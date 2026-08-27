@@ -125,7 +125,7 @@ export const paymentOptions: PaymentOption[] = [
     eyebrow: 'Rent it',
     price: '$279',
     cadence: '/month',
-    note: 'From $379 for larger builds, where there’s booking, a second language, or a shop.',
+    note: 'From $419 for larger builds, where there’s booking, a second language, or a shop.',
     body: 'Nothing down, and no build fee, on a site we’ve already built. $149 of the monthly is the full care plan; the rest is site rent. Twelve months minimum, then month-to-month. Your domain and your content stay yours the whole time. The site itself stays ours unless you buy it out.',
     theme: 'lotus',
     recommended: true,

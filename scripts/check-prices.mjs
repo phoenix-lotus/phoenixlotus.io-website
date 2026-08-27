@@ -31,7 +31,7 @@ const ALLOWED = [
   { amount: 30, source: 'HOSTED_PLATFORM_SURCHARGE_PRICE' },
   { amount: 90, source: 'MANAGED_WORDPRESS_SURCHARGE_PRICE' },
   { amount: 279, source: 'RENTAL_STANDARD_PRICE' },
-  { amount: 379, source: 'RENTAL_LARGER_PRICE' },
+  { amount: 419, source: 'RENTAL_LARGER_PRICE' },
   { amount: 379, source: 'RENTAL_STANDARD_VISIBILITY_PRICE' },
   { amount: 579, source: 'RENTAL_STANDARD_SOCIAL_PRICE' },
 ]
