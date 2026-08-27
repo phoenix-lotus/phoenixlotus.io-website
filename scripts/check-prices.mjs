@@ -27,13 +27,12 @@ const ALLOWED = [
   { amount: 300, source: 'REVIEW_SYSTEM_PRICE' },
   { amount: 450, source: 'EMAIL_SETUP_PRICE' },
   { amount: 75, source: 'EMAIL_MONTHLY_PRICE' },
-  { amount: 149, source: 'ADS_ADDON_FOOTNOTE.floor', context: /ad spend/i },
-  { amount: 99, source: 'RENTAL_EMBEDDED_CARE_PRICE', context: /full care plan/i },
+  { amount: 199, source: 'ADS_ADDON_FLOOR_PRICE' },
   { amount: 30, source: 'HOSTED_PLATFORM_SURCHARGE_PRICE' },
   { amount: 90, source: 'MANAGED_WORDPRESS_SURCHARGE_PRICE' },
-  { amount: 229, source: 'RENTAL_STANDARD_PRICE' },
-  { amount: 329, source: 'RENTAL_LARGER_PRICE' },
-  { amount: 309, source: 'RENTAL_STANDARD_VISIBILITY_PRICE' },
+  { amount: 279, source: 'RENTAL_STANDARD_PRICE' },
+  { amount: 379, source: 'RENTAL_LARGER_PRICE' },
+  { amount: 379, source: 'RENTAL_STANDARD_VISIBILITY_PRICE' },
   { amount: 579, source: 'RENTAL_STANDARD_SOCIAL_PRICE' },
 ]
 
@@ -41,10 +40,14 @@ const RETIRED = {
   // 149 removed 2026-08-26: no longer retired. It's RATE_CARD.care's
   // current price again (full circle — this was the pre-2026-08-15
   // figure, retired that day, now live again by a separate later
-  // decision), AND it now coincidentally equals ADS_ADDON_FOOTNOTE's
-  // ad-spend floor, unrelated but the same digits. Both ALLOWED entries
-  // for 149 are correct; see rateCard.ts's dated note for the collision.
-  199: 'the ads-floor minimum before the 2026-08-15 re-anchor',
+  // decision).
+  // 199 removed 2026-08-26 (second time around): no longer retired.
+  // It was retired once already (the ads-floor minimum before the
+  // 2026-08-15 re-anchor), came back briefly as RATE_CARD.care's old
+  // pre-2026-08-26 price, and is now live a third way, as the NEW
+  // ads-floor (ADS_ADDON_FLOOR_PRICE) — moved there same-day the care
+  // tiers rose, since $149 (the old floor) collided with the new care
+  // price. See rateCard.ts's dated note for the reasoning.
   // 449 removed 2026-08-26: no longer retired. It's RATE_CARD.social's
   // current price (raised from $249), now live in ALLOWED above. The
   // number the 2026-08-15 re-anchor retired was for a DIFFERENT tier
@@ -56,7 +59,18 @@ const RETIRED = {
   // — leaving it untracked (absent from both ALLOWED and RETIRED) gets
   // the generic "traces to no rateCard.ts constant" message, which is
   // accurate and doesn't need a named entry to be useful.
-  379: 'RENTAL_STANDARD_SOCIAL_PRICE before the 2026-08-26 social-tier raise',
+  //
+  // 229/309/329 (the pre-2026-08-26 rental figures) deliberately NOT
+  // added here either, same reasoning: a stray occurrence of any of them
+  // should fail loudly with the generic message rather than a named
+  // history lesson.
+  //
+  // 379 also deliberately NOT retired, even though it used to name
+  // RENTAL_STANDARD_SOCIAL_PRICE before the 2026-08-26 social-tier
+  // raise — it's now genuinely live again, twice over, as both
+  // RENTAL_LARGER_PRICE and the recomputed RENTAL_STANDARD_VISIBILITY_PRICE.
+  // Both ALLOWED entries above are correct; see rateCard.ts's dated note
+  // for the (unresolved, flagged) coincidence.
 }
 
 const SCAN_EXTS = /\.(ts|tsx|css|svg|html|md|json)$/
@@ -108,8 +122,6 @@ if (existsSync(RATE_CARD)) {
     derived[`RATE_CARD.${key}`] = Number(amount)
   for (const [, name, amount] of text.matchAll(/^export const ([A-Z_]+_PRICE) = (\d+)$/gm))
     derived[name] = Number(amount)
-  const floor = text.match(/\$(\d+)\/mo minimum/)
-  if (floor) derived['ADS_ADDON_FOOTNOTE.floor'] = Number(floor[1])
 
   // RATE_CARD displayPrices and HOUSE_LADDER amounts state the same three
   // tiers twice; if they disagree, the card itself is broken, not this site.
