@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Per-prospect entry tokens (see the /p/:token route in src/App.tsx).
+# They all redirect to the home page, so there is nothing here to index —
+# and a crawler walking them would pollute the Top pages analytics they exist to feed.
+Disallow: /p/
+
 Sitemap: https://phoenixlotus.io/sitemap.xml

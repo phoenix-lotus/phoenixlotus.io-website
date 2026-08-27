@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router'
+import { Routes, Route, Navigate, useLocation } from 'react-router'
 import Layout from './layout/Layout'
 import Home from './pages/Home'
 
@@ -51,6 +51,17 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/process" element={<Process />} />
           <Route path="/work/:slug" element={<CaseStudy />} />
+          {/*
+            Per-prospect entry tokens: email https://phoenixlotus.io/p/agnoli
+            instead of the bare URL and that path shows up as its own row in
+            Netlify's Top pages, which is the only per-person signal that
+            survives with JS off. No netlify.toml rule needed — the existing
+            /* catch-all already serves index.html here. This route just
+            keeps the landing from rendering NotFound before the redirect.
+            Deliberately not a query string: Netlify's analytics reports the
+            path only, so ?utm_content=... would be invisible to it.
+          */}
+          <Route path="/p/:token" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

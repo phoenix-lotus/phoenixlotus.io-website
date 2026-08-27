@@ -81,6 +81,40 @@
     />
 
     <!--
+      Analytics. Loaded from /lotus/* so it's a first-party request — see
+      netlify.toml for why, and for the rule ordering that makes it work.
+
+      No React wiring is needed and none should be added: the tracker
+      patches history.pushState/replaceState itself, so react-router
+      navigations already count, and it only emits when the URL actually
+      changed — re-clicking the current page's nav link doesn't double up.
+
+      data-host-url is the endpoint BASE; the tracker appends /api/send to
+      it, so it has to line up with the redirect exactly. data-domains
+      gates on location.hostname, which is what keeps localhost, deploy
+      previews and `npm run preview` out of the numbers — no build flag
+      involved. Don't add data-exclude-search: that drops the query string,
+      and the ?utm_* tags on emailed links are the whole point.
+
+      `vite build` warns that this "can't be bundled without type=module".
+      That warning is correct and wanted — the tracker reads its own config
+      off document.currentScript, so it has to stay a classic script. Adding
+      type="module" to quiet the warning would break it.
+
+      In `npm run dev` this logs a 404 for /lotus/script.js — vite doesn't
+      apply netlify.toml redirects, so the proxy only exists once deployed.
+      Expected, and harmless: data-domains would suppress the tracker on
+      localhost anyway. Use `netlify dev` if you want the rules applied.
+    -->
+    <script
+      defer
+      src="/lotus/script.js"
+      data-website-id="PASTE-UMAMI-WEBSITE-ID"
+      data-host-url="https://phoenixlotus.io/lotus"
+      data-domains="phoenixlotus.io"
+    ></script>
+
+    <!--
       One block, not two: this replaced a standalone Person block that
       described a developer rather than the business, so a search engine
       reading this page and a prospect reading a pitch saw two different

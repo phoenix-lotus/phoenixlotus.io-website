@@ -14,6 +14,32 @@
   status = 301
   force = true
 
+# Umami analytics, proxied so the tracker is a first-party request.
+# EasyPrivacy (on by default in uBlock Origin and Brave) blocks all of
+# umami.is by domain, and this site's audience — prospects and other
+# developers — skews blocker-heavy, so an off-site beacon would miss
+# exactly the visitors worth seeing. status = 200 to an absolute URL is a
+# proxy, not a redirect. Same reason as the rule above: these must stay
+# ABOVE the catch-all or it serves index.html here and analytics dies
+# silently. The /lotus path avoids the words analytics/stats/track, which
+# are themselves on blocklists.
+#
+# The two hosts are not a typo — the tracker ships from cloud.umami.is but
+# posts to gateway.umami.is (its own built-in default, read from the
+# script source). Note also: never add a public/_redirects file, since
+# those are processed before netlify.toml and would shadow these.
+[[redirects]]
+  from = "/lotus/script.js"
+  to = "https://cloud.umami.is/script.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/lotus/api/send"
+  to = "https://gateway.umami.is/api/send"
+  status = 200
+  force = true
+
 # SPA fallback so /work/:slug deep links resolve to the app
 [[redirects]]
   from = "/*"
