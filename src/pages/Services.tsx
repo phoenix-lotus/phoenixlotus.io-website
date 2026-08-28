@@ -44,20 +44,17 @@ export default function Services() {
         <SectionHeading eyebrow="Services & pricing" title="Our pricing models" />
 
         <Reveal className="mt-7">
-          <ul className="flex flex-col divide-y divide-line border-y border-line sm:flex-row sm:divide-x sm:divide-y-0">
+          <ul className="flex divide-x divide-line border-y border-line">
             {paymentOptions.map((option) => {
               const t = THEME[option.theme]
               return (
                 <li
                   key={option.key}
-                  className="flex flex-1 items-center gap-3 py-4 sm:px-6 sm:first:pl-0 sm:last:pr-0"
+                  className="flex flex-1 items-center gap-2.5 py-4 pl-4 first:pl-0 sm:gap-3 sm:pl-6"
                 >
                   <span className={cn('h-5 w-1 shrink-0 rounded-full', t.gradient)} aria-hidden />
                   <span className="font-display text-lg font-bold leading-none text-ink">
                     {option.eyebrow}
-                  </span>
-                  <span className="whitespace-nowrap text-sm leading-none text-muted">
-                    {option.price} <span className="text-muted/70">{option.cadence}</span>
                   </span>
                 </li>
               )
