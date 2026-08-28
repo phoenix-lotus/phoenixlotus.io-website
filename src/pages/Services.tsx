@@ -216,8 +216,8 @@ export default function Services() {
             </p>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
               A five-page site for a shop and a bilingual site with online booking and payments are
-              not the same job, and a headline number would only be right for one of them. The quote
-              comes after the audit, when we both know what’s actually being built.
+              not the same job, and a headline number would only be right for one of them. You tell
+              us what you want your website to do, and we build a customized quote for your project.
             </p>
             <div className="mt-7">
               <GradientButton to="/#contact" size="lg" magnetic>
