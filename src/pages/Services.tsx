@@ -55,7 +55,7 @@ export default function Services() {
                 Start at <GradientText>nothing down</GradientText>
               </>
             }
-            intro="The build is the expensive part, and renting means we carry it instead of you. That’s what puts a rented site at $279 a month with nothing up front. Buying the build outright and splitting the fee into monthly payments both stand alongside it."
+            intro="We know that having a lump sum to put towards a site might be difficult, so we offer a monthly rental option with nothing down."
           />
 
           <Stagger as="ul" className="mt-12 grid gap-5 lg:grid-cols-3">
