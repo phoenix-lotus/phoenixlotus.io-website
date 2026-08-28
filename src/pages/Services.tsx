@@ -65,7 +65,7 @@ export default function Services() {
             eyebrow="Ways to pay"
             title={
               <>
-                Start at <GradientText>nothing down</GradientText>
+                Start at <GradientText>$0 down</GradientText>
               </>
             }
             intro="We know that having a lump sum to put towards a site might be difficult, so we offer a monthly rental option with nothing down."

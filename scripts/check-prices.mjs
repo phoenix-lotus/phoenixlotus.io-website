@@ -105,6 +105,11 @@ for (const path of [join(ROOT, 'index.html'), ...textFiles(join(ROOT, 'src'))]) 
       figureCount += 1
       scannedFiles.add(path)
       const amount = Number(match[1].replaceAll(',', ''))
+      // $0 is the absence of a price, not one ("Start at $0 down"). No tier is
+      // free, so unlike a real figure it can't be a stale price that drifted
+      // off the rate card. Skipped here rather than added to ALLOWED, which
+      // requires every source to resolve to an actual rateCard.ts constant.
+      if (amount === 0) continue
       const candidates = ALLOWED.filter((e) => e.amount === amount)
       // context must hold on the figure's own line — a wider window let a bare
       // $149 pass just for sitting near the ads footnote.
