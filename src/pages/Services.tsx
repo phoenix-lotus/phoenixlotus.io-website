@@ -43,23 +43,22 @@ export default function Services() {
       <div className="container-page">
         <SectionHeading eyebrow="Services & pricing" title="Our pricing models" />
 
-        <Reveal className="mt-12">
-          <ul className="grid divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface/60 backdrop-blur sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+        <Reveal className="mt-7">
+          <ul className="flex flex-col divide-y divide-line border-y border-line sm:flex-row sm:divide-x sm:divide-y-0">
             {paymentOptions.map((option) => {
               const t = THEME[option.theme]
               return (
-                <li key={option.key} className="p-6 text-center sm:p-8">
-                  <span
-                    className={cn('mx-auto block h-1 w-10 rounded-full', t.gradient)}
-                    aria-hidden
-                  />
-                  <p className="mt-4 font-display text-2xl font-extrabold text-ink">
+                <li
+                  key={option.key}
+                  className="flex flex-1 items-center gap-3 py-4 sm:px-6 sm:first:pl-0 sm:last:pr-0"
+                >
+                  <span className={cn('h-5 w-1 shrink-0 rounded-full', t.gradient)} aria-hidden />
+                  <span className="font-display text-lg font-bold leading-none text-ink">
                     {option.eyebrow}
-                  </p>
-                  <p className="mt-2 flex items-baseline justify-center gap-1.5">
-                    <span className="font-semibold text-ink-soft">{option.price}</span>
-                    <span className="text-sm text-muted">{option.cadence}</span>
-                  </p>
+                  </span>
+                  <span className="whitespace-nowrap text-sm leading-none text-muted">
+                    {option.price} <span className="text-muted/70">{option.cadence}</span>
+                  </span>
                 </li>
               )
             })}
