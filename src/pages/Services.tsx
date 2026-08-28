@@ -41,10 +41,29 @@ export default function Services() {
       <AuroraBackground intensity="soft" />
 
       <div className="container-page">
-        <SectionHeading
-          eyebrow="Services & pricing"
-          title="Our pricing models"
-        />
+        <SectionHeading eyebrow="Services & pricing" title="Our pricing models" />
+
+        <Stagger as="ul" className="mt-12 grid gap-4 sm:grid-cols-3">
+          {paymentOptions.map((option) => {
+            const t = THEME[option.theme]
+            return (
+              <motion.li
+                key={option.key}
+                variants={fadeUp}
+                className="overflow-hidden rounded-2xl border border-line bg-surface/60 backdrop-blur transition-shadow hover:shadow-soft"
+              >
+                <span className={cn('block h-1.5 w-full', t.gradient)} aria-hidden />
+                <div className="p-6 text-center">
+                  <p className="font-display text-2xl font-extrabold text-ink">{option.eyebrow}</p>
+                  <p className="mt-2 flex items-baseline justify-center gap-1.5">
+                    <span className="font-semibold text-ink-soft">{option.price}</span>
+                    <span className="text-sm text-muted">{option.cadence}</span>
+                  </p>
+                </div>
+              </motion.li>
+            )
+          })}
+        </Stagger>
 
         {/* Ways to pay */}
         <div className="mt-20">
