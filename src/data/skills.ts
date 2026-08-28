@@ -179,8 +179,10 @@ export const facts = [
   // one launched and currently live) and had already been corrected once for
   // exactly this class of error (commit 62b562f, re: DrafTech — since
   // removed from the shelf; the lesson predates and outlives the tile).
-  // "Built" is true of all 9 regardless of stage, so it doesn't need
-  // re-verifying as each project moves.
+  // "Built" is true of all 6 regardless of stage, so it doesn't need
+  // re-verifying as each project moves. The count tracks projects.ts and
+  // must be recounted whenever the shelf changes — it went 9 -> 6 on
+  // 2026-08-28 when Inkloom, Typewriter, and GigaPet came off.
   //
   // 2020 is the first PAID client work — Evan Fowler and Sarai, under the
   // earlier PhoenixLotus Media name, git-dated 2020-11 in
@@ -192,6 +194,6 @@ export const facts = [
   // exactly what the note above forbids.
   { value: '2019', label: "Robert's first site built" },
   { value: '2020', label: "Robert's first paying clients" },
-  { value: '9', label: 'projects Robert built' },
+  { value: '6', label: 'projects Robert built' },
   { value: 'Family', label: 'owned & operated' },
 ]

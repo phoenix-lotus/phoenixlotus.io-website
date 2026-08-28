@@ -29,10 +29,10 @@ export default function ProjectsGrid() {
   )
 
   return (
-    <section id="projects" className="scroll-mt-24 py-20 md:py-28">
+    <section id="work" className="scroll-mt-24 py-20 md:py-28">
       <div className="container-page">
         <SectionHeading
-          eyebrow="Everything"
+          eyebrow="What we've built"
           title="The full project shelf"
           intro="Marketplaces, AI tools, builds for people we know, and the experiments in between."
         />

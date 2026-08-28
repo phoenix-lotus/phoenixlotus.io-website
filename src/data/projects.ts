@@ -217,45 +217,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'inkloom',
-    title: 'Inkloom',
-    featured: true,
-    order: 3,
-    tagline: 'Print-on-demand, one order at a time.',
-    description:
-      'A consumer print-on-demand storefront spanning photo prints, wall art, signage, photo books, calendars, and stickers — with a Claude-powered design assistant that reads your photo to recommend size and DPI, server-side PDF generation, and Stripe checkout.',
-    longDescription: [
-      'Inkloom is a consumer print storefront with a broad catalog — photo prints, wall art in six substrates, yard signs and banners, photo books, calendars, event signage, and stickers. It pairs a polished storefront (drag-and-drop upload, in-browser cropping) with a Claude design assistant that inspects a photo and recommends print size and DPI, degrading gracefully to deterministic suggestions if the AI is unavailable.',
-      'Under the hood it’s a real commerce system: Stripe Checkout with automatic tax and promo codes, server-side PDF composition and watermarking, and a Resend-based transactional-email and vendor-handoff pipeline. Security was code-managed from the start — order tables are service-role-only and the storage bucket serves uploads through signed URLs.',
-      'It was cleanly rebranded mid-flight from “Light & Linen” to “Inkloom” across app strings, emails, and even PDF metadata. It runs in Stripe test mode today, with a short punch list between it and live revenue.',
-    ],
-    role: 'Solo founder & full-stack engineer',
-    year: '2026',
-    tech: [
-      'React 19',
-      'Vite',
-      'Tailwind',
-      'Supabase',
-      'Netlify Functions',
-      'Stripe',
-      'Claude',
-      'Resend',
-      'pdf-lib',
-      'sharp',
-    ],
-    highlights: [
-      'Broad catalog across six-plus print product families',
-      'AI photo-analysis assistant suggesting size/DPI, with deterministic fallback',
-      'Server-side PDF generation, watermarking & vendor handoff via Resend',
-      'Security-first data model: service-role tables + signed-URL uploads',
-    ],
-    status: 'pre-launch',
-    category: ['app', 'ai'],
-    links: {},
-    colorTheme: 'lotus',
-    media: [{ type: 'fallback', alt: 'Inkloom print storefront', frame: 'browser', aspect: '16/10' }],
-  },
-  {
     slug: 'hopfiesta',
     title: 'HopFiesta',
     featured: true,
@@ -291,46 +252,6 @@ export const projects: Project[] = [
     links: {},
     colorTheme: 'pool',
     media: [{ type: 'fallback', alt: 'HopFiesta operator onboarding wizard', frame: 'browser', aspect: '16/10' }],
-  },
-  {
-    slug: 'typewriter',
-    title: "Katie's Typewriter",
-    featured: false,
-    order: 6,
-    tagline: 'Slot-machine dopamine, pointed at real writing.',
-    description:
-      'A distraction-free writing app that borrows the reward loop of a slot machine and aims it at real writing — a Claude co-writer that mirrors your voice, a three-reel “Muse Machine” to beat the blank page, golden-line catches, streaks, and a calm mode that silences the whole casino.',
-    longDescription: [
-      'Katie’s Typewriter was built for one creative writer with a single thesis: make the lever-pull the act of writing, and the jackpot her own good words. It’s a distraction-first, form-aware editor (poem / story / prose / fragment) with autosave, live word count, typewriter key-clack, and cross-device realtime sync.',
-      'The AI co-writer is summoned on demand in three modes — continue, rewrite, unstick — each streamed as options to pick or reroll. Crucially, its voice-mirror context is assembled server-side from her recent pieces, so suggestions sound like her, not generic AI. The data model is already laid for a pgvector upgrade without a migration.',
-      'Around the writing sits a carefully restrained game layer — the three-reel Muse Machine, “golden line” capture with coins and confetti, streaks with a grace day, XP and levels, a milestones wall, and a submission tracker — and a one-toggle Calm Mode that silences all of it. Nothing gamified ever gates the writing itself.',
-    ],
-    role: 'Solo full-stack engineer (built for a writer)',
-    year: '2026',
-    tech: [
-      'React 19',
-      'Vite',
-      'Tailwind',
-      'Zustand',
-      'Supabase (Realtime)',
-      'Netlify Functions',
-      'Claude (streamed)',
-      'mammoth.js',
-      'canvas-confetti',
-    ],
-    highlights: [
-      'Streamed 3-option AI co-writer with a server-built voice-mirror context',
-      'Three-reel “Muse Machine” prompt generator with hold-and-reroll',
-      'Real-progress reward loop — golden lines, streaks, XP, milestones',
-      'Calm Mode that silences the entire game layer on one toggle',
-    ],
-    status: 'mvp',
-    category: ['app', 'ai', 'concept'],
-    links: {},
-    colorTheme: 'ember',
-    media: [
-      { type: 'fallback', alt: "Katie's Typewriter writing app", frame: 'browser', aspect: '16/10' },
-    ],
   },
   {
     slug: 'celestial-opalescence',
@@ -407,47 +328,6 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: 'gigapet',
-    title: 'Gigapet',
-    featured: false,
-    order: 9,
-    tagline: 'A festival totem that loves to be fed light and music.',
-    description:
-      'A virtual pet built for a giant LED totem at an EDM festival — it hears the music through a mic, detects the drop, and dances harder the better the set gets. The full pet-brain runs live in the browser: a real bass-flux drop detector reacting to real audio, not a canned animation.',
-    longDescription: [
-      "Gigapet is a Tamagotchi for a festival totem: a globe of addressable LED neon-flex on an 8–10ft pole, with lit \"feed lines\" running down to a Raspberry Pi control box and a 16×16 LED-matrix face. It sleeps through quiet stretches, vibes to a groove, and full-on raves when it detects a drop — fed light manually via a button, fed energy by the crowd.",
-      "The interesting engineering is in the detector, not the lights. Rather than reach for an academic beat-tracker (which loses lock exactly when a buildup kills the kick), the drop detector watches bass-band energy on two time constants — a fast and a slow EMA — and fires when the ratio snaps past a threshold, with spectral flux gating out false positives from wind and crowd noise. It's the same heuristic WLED-SoundReactive and LedFx converge on in practice.",
-      "The pet-brain, audio DSP, and fixture-mapped renderer started life in Python for the real Raspberry Pi build, then got ported line-for-line to TypeScript — including a hand-rolled FFT mirroring the original numpy pipeline exactly — so the whole thing runs standalone in a browser with zero backend. The live demo defaults to a scripted narrative that exercises the real detector end-to-end (no hardcoded triggers), or grant mic access and it reacts to whatever's actually playing in the room.",
-      'The hardware — globe, pole, LEDs, Pi — is a slower build for next festival season. The software above is done and running now.',
-    ],
-    role: 'Solo builder (in progress)',
-    year: '2026–2027',
-    tech: [
-      'TypeScript',
-      'Python',
-      'Three.js',
-      'Web Audio API',
-      'NumPy',
-      'Vite',
-      'Raspberry Pi',
-      'WLED / ESP32',
-      'WS2812B',
-    ],
-    highlights: [
-      'A real bass-flux drop/buildup detector reacting to live audio, not a scripted animation',
-      "Pet-brain, audio DSP, and renderer ported line-for-line Python → TypeScript for a zero-backend browser demo",
-      '3D Three.js visualization of the actual physical fixture layout — globe spiral, pole lines, 16×16 face',
-      'Simulator-first workflow: the full pet is built and testable months before any LED ships',
-    ],
-    status: 'prototype',
-    category: ['concept', 'app'],
-    links: { live: 'https://gigapet-demo.netlify.app', github: 'https://github.com/phoenix-lotus/gigapet' },
-    colorTheme: 'pool',
-    media: [
-      { type: 'fallback', alt: 'Gigapet browser demo — a music-reactive virtual pet', frame: 'browser', aspect: '16/10' },
-    ],
-  },
 ]
 
 /** Small, honest "Labs" strip — early-stage experiments, presented as such. */
@@ -457,7 +337,6 @@ export const labs = [
   { name: 'Wax', blurb: 'A curated sticker-drop platform concept for festival culture.' },
 ]
 
-export const featuredProjects = projects.filter((p) => p.featured).sort((a, b) => a.order - b.order)
 export const allProjects = [...projects].sort((a, b) => a.order - b.order)
 
 export function getProject(slug: string) {

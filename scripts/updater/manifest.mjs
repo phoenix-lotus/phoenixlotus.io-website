@@ -59,8 +59,6 @@ export const PROJECTS = {
     liveUrl: null,
   },
   hopfiesta: { source: 'github', repo: 'hopfiesta', liveUrl: null },
-  inkloom: { source: 'github', repo: 'printshop-ai', liveUrl: null }, // repo name is stale ("printshop-ai" → product is Inkloom)
-  typewriter: { source: 'github', repo: 'typewriter', liveUrl: null },
   'happy-hoppers': {
     source: 'github',
     repo: 'happyhoppersrentals',

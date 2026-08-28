@@ -2,7 +2,6 @@ import Hero from '@/sections/Hero'
 import Studio from '@/sections/Studio'
 import Skills from '@/sections/Skills'
 import About from '@/sections/About'
-import FeaturedWork from '@/sections/FeaturedWork'
 import ProjectsGrid from '@/sections/ProjectsGrid'
 import Contact from '@/sections/Contact'
 import { site } from '@/data/site'
@@ -21,7 +20,6 @@ export default function Home() {
       <Studio />
       <Skills />
       <About />
-      <FeaturedWork />
       <ProjectsGrid />
       <Contact />
     </>
