@@ -43,34 +43,8 @@ export default function Services() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Services & pricing"
-          title={
-            <>
-              What it costs, <GradientText>in public</GradientText>
-            </>
-          }
-          intro="These are house prices, not opening bids. They're here so you can work out whether this is worth a conversation before either of us spends an hour on one."
+          title="Our pricing models"
         />
-
-        {/* The build itself — deliberately unpriced */}
-        <Reveal className="mt-14">
-          <div className="glass rounded-2xl p-6 sm:p-8">
-            <p className="font-mono text-xs uppercase tracking-widest text-muted">The site itself</p>
-            <p className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
-              Quoted per project
-            </p>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              A five-page site for a shop and a bilingual site with online booking and payments are
-              not the same job, and a headline number would only be right for one of them. The quote
-              comes after the audit, when we both know what’s actually being built.
-            </p>
-            <div className="mt-7">
-              <GradientButton to="/#contact" size="lg" magnetic>
-                Let’s talk
-                <ArrowRight size={18} />
-              </GradientButton>
-            </div>
-          </div>
-        </Reveal>
 
         {/* Ways to pay */}
         <div className="mt-20">
@@ -228,9 +202,30 @@ export default function Services() {
           </div>
         </Reveal>
 
-        {/* Add-on + close */}
+        {/* Add-on */}
         <Reveal className="mt-10">
           <p className="max-w-3xl text-sm leading-relaxed text-muted">{adsAddOn}</p>
+        </Reveal>
+
+        {/* The build itself — deliberately unpriced */}
+        <Reveal className="mt-10">
+          <div className="glass rounded-2xl p-6 sm:p-8">
+            <p className="font-mono text-xs uppercase tracking-widest text-muted">The site itself</p>
+            <p className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
+              Quoted per project
+            </p>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+              A five-page site for a shop and a bilingual site with online booking and payments are
+              not the same job, and a headline number would only be right for one of them. The quote
+              comes after the audit, when we both know what’s actually being built.
+            </p>
+            <div className="mt-7">
+              <GradientButton to="/#contact" size="lg" magnetic>
+                Let’s talk
+                <ArrowRight size={18} />
+              </GradientButton>
+            </div>
+          </div>
         </Reveal>
 
         <Reveal className="mt-20">
