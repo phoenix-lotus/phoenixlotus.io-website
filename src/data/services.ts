@@ -135,7 +135,7 @@ export const paymentOptions: PaymentOption[] = [
     eyebrow: 'Split it',
     price: 'A third down',
     cadence: 'then monthly',
-    body: 'The same fee, spread out: a third at signing, the rest in equal monthly payments on autopay. Smaller builds run up to six months; the rest can take the full twelve. Nothing is added for paying over time, so the total matches paying up front. The care plan stays on while payments run, and the site is yours outright at the last one.',
+    body: 'A flexible option for purchasing the site where the payments are spread out: a third at signing, the rest in equal monthly payments on autopay. Smaller builds run up to six months; the rest can take the full twelve. Nothing is added for paying over time, so the total matches paying up front. The care plan stays on while payments run, and the site is yours outright at the last one.',
     theme: 'ember',
   },
   {
