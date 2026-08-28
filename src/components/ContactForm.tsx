@@ -132,7 +132,11 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={state === 'submitting'}
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-grad-phoenix px-6 py-3.5 font-semibold text-white shadow-phoenix transition-all hover:shadow-lift disabled:opacity-70 [background-size:150%_auto] hover:[background-position:100%]"
+              // The permanent shadow-phoenix glow otherwise beats the global focus
+              // ring outright (:where() in styles/index.css is zero-specificity by
+              // design) — same fix as GradientButton's primary variant, redeclared
+              // here since this button is hand-styled rather than that component.
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-grad-phoenix px-6 py-3.5 font-semibold text-white shadow-phoenix transition-all hover:shadow-lift focus-visible:outline-none focus-visible:shadow-[0_0_0_2px_rgb(var(--bg-base)),0_0_0_4px_#ff5e3a] disabled:opacity-70 [background-size:150%_auto] hover:[background-position:100%]"
             >
               {state === 'submitting' ? (
                 <>

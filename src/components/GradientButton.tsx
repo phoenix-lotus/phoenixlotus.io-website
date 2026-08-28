@@ -8,7 +8,12 @@ type Variant = 'primary' | 'glass' | 'ghost'
 type Size = 'md' | 'lg'
 
 const base =
-  'relative inline-flex select-none items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-transform duration-200 focus-visible:outline-none disabled:opacity-60'
+  // The global focus ring (styles/index.css) is written with zero-specificity
+  // :where() on purpose, so it normally just works everywhere — but a
+  // permanent box-shadow utility (shadow-phoenix on the primary variant)
+  // still beats zero specificity outright and silently swallows it. Redeclare
+  // the same ring here, scoped to :focus-visible, so it wins regardless.
+  'relative inline-flex select-none items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-transform duration-200 focus-visible:outline-none focus-visible:shadow-[0_0_0_2px_rgb(var(--bg-base)),0_0_0_4px_#ff5e3a] disabled:opacity-60'
 
 const variants: Record<Variant, string> = {
   primary:

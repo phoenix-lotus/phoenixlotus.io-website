@@ -6,6 +6,7 @@ import Home from './pages/Home'
 const Services = lazy(() => import('./pages/Services'))
 const Process = lazy(() => import('./pages/Process'))
 const CaseStudy = lazy(() => import('./pages/CaseStudy'))
+const Accessibility = lazy(() => import('./pages/Accessibility'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 /**
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/process" element={<Process />} />
           <Route path="/work/:slug" element={<CaseStudy />} />
+          <Route path="/accessibility" element={<Accessibility />} />
           {/*
             Per-prospect entry tokens: email https://phoenixlotus.io/p/agnoli
             instead of the bare URL and that path shows up as its own row in

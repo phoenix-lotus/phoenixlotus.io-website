@@ -54,7 +54,10 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-line pt-6 sm:flex-row">
           <p className="text-sm text-muted">
-            © {year} {site.name} · PhoenixLotus. Made with <HeartIcon /> in Mendocino County, CA.
+            © {year} {site.name} · PhoenixLotus. Made with <HeartIcon /> in Mendocino County, CA. ·{' '}
+            <Link to="/accessibility" className="text-ink-soft transition-colors hover:text-phoenix-600">
+              Accessibility
+            </Link>
           </p>
           <p className="font-mono text-xs text-muted">Built with React · Vite · Tailwind · Framer Motion</p>
           <button
