@@ -43,27 +43,28 @@ export default function Services() {
       <div className="container-page">
         <SectionHeading eyebrow="Services & pricing" title="Our pricing models" />
 
-        <Stagger as="ul" className="mt-12 grid gap-4 sm:grid-cols-3">
-          {paymentOptions.map((option) => {
-            const t = THEME[option.theme]
-            return (
-              <motion.li
-                key={option.key}
-                variants={fadeUp}
-                className="overflow-hidden rounded-2xl border border-line bg-surface/60 backdrop-blur transition-shadow hover:shadow-soft"
-              >
-                <span className={cn('block h-1.5 w-full', t.gradient)} aria-hidden />
-                <div className="p-6 text-center">
-                  <p className="font-display text-2xl font-extrabold text-ink">{option.eyebrow}</p>
+        <Reveal className="mt-12">
+          <ul className="grid divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface/60 backdrop-blur sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            {paymentOptions.map((option) => {
+              const t = THEME[option.theme]
+              return (
+                <li key={option.key} className="p-6 text-center sm:p-8">
+                  <span
+                    className={cn('mx-auto block h-1 w-10 rounded-full', t.gradient)}
+                    aria-hidden
+                  />
+                  <p className="mt-4 font-display text-2xl font-extrabold text-ink">
+                    {option.eyebrow}
+                  </p>
                   <p className="mt-2 flex items-baseline justify-center gap-1.5">
                     <span className="font-semibold text-ink-soft">{option.price}</span>
                     <span className="text-sm text-muted">{option.cadence}</span>
                   </p>
-                </div>
-              </motion.li>
-            )
-          })}
-        </Stagger>
+                </li>
+              )
+            })}
+          </ul>
+        </Reveal>
 
         {/* Ways to pay */}
         <div className="mt-20">
