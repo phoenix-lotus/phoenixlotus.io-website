@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "check:prices": "node scripts/check-prices.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs",
     "prebuild": "npm run check:prices",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
@@ -25,6 +26,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.13.0",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.20.1",
@@ -32,10 +34,14 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.20",
+    "chromedriver": "^148.0.4",
     "postcss": "^8.5.25",
     "sharp": "^0.35.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
     "vite": "^6.0.5"
+  },
+  "allowScripts": {
+    "chromedriver@148.0.4": true
   }
 }
