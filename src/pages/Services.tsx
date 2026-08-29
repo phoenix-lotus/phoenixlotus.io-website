@@ -3,6 +3,7 @@ import { ArrowRight, Check } from 'lucide-react'
 import AuroraBackground from '@/components/AuroraBackground'
 import GradientButton from '@/components/GradientButton'
 import GradientText from '@/components/GradientText'
+import PaymentOptionCard from '@/components/PaymentOptionCard'
 import SectionHeading from '@/components/SectionHeading'
 import { Reveal, Stagger } from '@/components/Reveal'
 import {
@@ -72,50 +73,9 @@ export default function Services() {
           />
 
           <Stagger as="ul" className="mt-12 grid gap-5 lg:grid-cols-3">
-            {paymentOptions.map((option) => {
-              const t = THEME[option.theme]
-              return (
-                <motion.li
-                  key={option.key}
-                  variants={fadeUp}
-                  className={cn(
-                    'flex flex-col rounded-2xl border p-6 transition-shadow',
-                    option.recommended
-                      ? cn('border-lotus-500 bg-surface', t.shadow)
-                      : 'border-line bg-surface/60 backdrop-blur hover:shadow-soft',
-                  )}
-                >
-                  <div className="flex items-center gap-3">
-                    <span
-                      className={cn('h-8 w-1.5 shrink-0 rounded-full', t.gradient)}
-                      aria-hidden
-                    />
-                    {/* The pill lives inside the h3 so heading navigation announces
-                        "Rent it Recommended" — as a sibling it was a floating word. */}
-                    <h3 className="flex flex-1 items-center gap-3 font-mono text-xs uppercase tracking-widest text-muted">
-                      {option.eyebrow}
-                      {option.recommended && (
-                        <span className="ml-auto inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-lotus-500 bg-surface px-2.5 py-1 font-medium tracking-widest text-ink">
-                          <span
-                            className={cn('h-1.5 w-1.5 rounded-full', t.gradient)}
-                            aria-hidden
-                          />
-                          Recommended
-                        </span>
-                      )}
-                    </h3>
-                  </div>
-                  <p className="mt-5 flex items-baseline gap-1.5">
-                    <span className="font-display text-3xl font-extrabold text-ink">
-                      {option.price}
-                    </span>
-                    <span className="text-sm text-ink-soft">{option.cadence}</span>
-                  </p>
-                  {option.note && <p className="mt-1.5 text-sm text-ink-soft">{option.note}</p>}
-                  <p className="mt-4 leading-relaxed text-ink-soft">{option.body}</p>
-                </motion.li>
-              )
-            })}
+            {paymentOptions.map((option) => (
+              <PaymentOptionCard key={option.key} option={option} blurb={option.body} />
+            ))}
           </Stagger>
 
           <Reveal className="mt-6">

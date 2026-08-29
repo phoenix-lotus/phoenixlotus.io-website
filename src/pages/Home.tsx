@@ -1,5 +1,6 @@
 import Hero from '@/sections/Hero'
 import Studio from '@/sections/Studio'
+import Pricing from '@/sections/Pricing'
 import Skills from '@/sections/Skills'
 import About from '@/sections/About'
 import ProjectsGrid from '@/sections/ProjectsGrid'
@@ -18,6 +19,7 @@ export default function Home() {
 
       <Hero />
       <Studio />
+      <Pricing />
       <Skills />
       <About />
       <ProjectsGrid />

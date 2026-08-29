@@ -19,22 +19,29 @@ export interface Plan {
   theme: ColorTheme
 }
 
+/**
+ * The base tier, hoisted out of `plans` because the home page's pricing
+ * teaser quotes this one figure and needs to reach it by name — indexing
+ * into `plans` would silently repoint it the day the array is reordered.
+ */
+export const carePlan: Plan = {
+  key: 'care',
+  eyebrow: 'Care & hosting',
+  price: '$149',
+  cadence: '/month',
+  body: 'Hosting, uptime monitoring, security and dependency updates, up to two content updates a month, and a monthly health report — plus a real person on the other end during business hours, Monday to Friday.',
+  includes: [
+    'Business hours M–F 9–5 — a real person, not a ticket queue',
+    'Hosting + SSL, uptime monitoring',
+    'Security & dependency updates',
+    'Up to 2 content updates/mo',
+    'Monthly health report',
+  ],
+  theme: 'ember',
+}
+
 export const plans: Plan[] = [
-  {
-    key: 'care',
-    eyebrow: 'Care & hosting',
-    price: '$149',
-    cadence: '/month',
-    body: 'Hosting, uptime monitoring, security and dependency updates, up to two content updates a month, and a monthly health report — plus a real person on the other end during business hours, Monday to Friday.',
-    includes: [
-      'Business hours M–F 9–5 — a real person, not a ticket queue',
-      'Hosting + SSL, uptime monitoring',
-      'Security & dependency updates',
-      'Up to 2 content updates/mo',
-      'Monthly health report',
-    ],
-    theme: 'ember',
-  },
+  carePlan,
   {
     key: 'visibility',
     eyebrow: 'Care + local visibility',
@@ -110,6 +117,14 @@ export interface PaymentOption {
   recommended?: boolean
   /** Secondary pricing line, kept out of `cadence` so the headline price stays one line. */
   note?: string
+  /**
+   * One-line version of `body`, for the home page's pricing teaser, which has
+   * room for a sentence where /services has room for a paragraph. It lives
+   * here rather than in the section that renders it so the two surfaces can't
+   * drift into describing the same option differently — the same reason the
+   * dollar figures are read from this file instead of retyped.
+   */
+  summary: string
 }
 
 /**
@@ -128,6 +143,8 @@ export const paymentOptions: PaymentOption[] = [
     note: 'From $419 for larger builds, where there’s booking, a second language, or a shop.',
     body: 'Nothing down. $149 of the monthly is the basic care + hosting plan which is required; the rest is site rent. Twelve months minimum, then month-to-month. Your domain and your content stay yours the whole time. The site itself stays ours unless you buy it out.',
     theme: 'lotus',
+    summary:
+      'Nothing up front, and care and hosting is already in it. Twelve months minimum, then month-to-month.',
     recommended: true,
   },
   {
@@ -137,6 +154,8 @@ export const paymentOptions: PaymentOption[] = [
     cadence: 'then monthly',
     body: 'A flexible option for purchasing the site where the payments are spread out: a third at signing, the rest in equal monthly payments on autopay. Smaller builds run up to six months; the rest can take the full twelve. Nothing is added for paying over time, so the total matches paying up front. The care plan stays on while payments run, and the site is yours outright at the last one.',
     theme: 'ember',
+    summary:
+      'A third at signing, the rest on autopay over six to twelve months. Nothing is added for paying over time.',
   },
   {
     key: 'buy',
@@ -145,6 +164,8 @@ export const paymentOptions: PaymentOption[] = [
     cadence: 'quoted per project',
     body: 'Half at signing, half at launch. Everything is yours at the last payment: the site, the files, the code.',
     theme: 'phoenix',
+    summary:
+      'Half at signing, half at launch — the site, the files, and the code are yours at the last payment.',
   },
 ]
 
